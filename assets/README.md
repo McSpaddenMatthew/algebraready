@@ -1,3 +1,3 @@
 # Website assets
 
-Save the smiling instructor photo from the prompt as `matthew-smiling.jpg` in this directory.
+`matthew-smiling.svg` supplies the instructor image used in the hero trust card. Replace it with a real photo later if needed, and update the `src` in `index.html` to match the replacement file.
