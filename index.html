@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="Algebra Ready is a selective 12-week mathematics academy for capable students in grades 4–6 in the Charleston area."
+      content="Algebra Ready is a 12-week semi-private mathematics academy for capable students in grades 4–6 in the Charleston area. Four students maximum, individually matched tasks, and visible evidence every four weeks."
     />
     <meta name="robots" content="index,follow" />
     <meta name="theme-color" content="#101d2a" />
@@ -17,7 +17,7 @@
     />
     <meta
       property="og:description"
-      content="A selective 12-week mathematics academy for capable students in grades 4–6 in the Charleston area."
+      content="A 12-week semi-private mathematics academy for capable students in grades 4–6. Four students maximum, individually matched tasks, and visible evidence every four weeks."
     />
     <meta name="twitter:card" content="summary" />
     <title>Algebra Ready — An A Is the Starting Point</title>
@@ -195,7 +195,7 @@
         border-top: 1px solid currentColor;
       }
       .hero h1 {
-        font: 400 clamp(65px, 7.5vw, 108px)/0.84 var(--serif);
+        font: 400 clamp(65px, 7.5vw, 108px) / 0.84 var(--serif);
         letter-spacing: -0.045em;
         margin: 30px 0 18px;
         max-width: 850px;
@@ -205,7 +205,7 @@
         color: var(--rust);
       }
       .hero-promise {
-        font: 400 clamp(29px, 3vw, 42px)/1 var(--serif);
+        font: 400 clamp(29px, 3vw, 42px) / 1 var(--serif);
         margin: 0 0 22px;
       }
       .hero-copy {
@@ -218,6 +218,24 @@
         display: flex;
         gap: 12px;
         flex-wrap: wrap;
+      }
+      .founding-note {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        max-width: 650px;
+        margin-top: 24px;
+        color: #45535e;
+        font-size: 12px;
+      }
+      .founding-note:before {
+        content: "";
+        width: 9px;
+        height: 9px;
+        flex: 0 0 9px;
+        border-radius: 50%;
+        background: var(--rust);
+        box-shadow: 0 0 0 5px rgba(199, 83, 50, 0.12);
       }
       .hero-art {
         height: 500px;
@@ -236,7 +254,7 @@
         inset: 0;
         display: grid;
         place-items: center;
-        font: 400 clamp(100px, 13vw, 176px)/1 var(--serif);
+        font: 400 clamp(100px, 13vw, 176px) / 1 var(--serif);
         letter-spacing: -0.08em;
         transform: rotate(-7deg);
       }
@@ -290,7 +308,7 @@
         text-transform: uppercase;
       }
       .belief h2 {
-        font: 400 clamp(52px, 6.6vw, 88px)/0.95 var(--serif);
+        font: 400 clamp(52px, 6.6vw, 88px) / 0.95 var(--serif);
         letter-spacing: -0.025em;
         margin: 0;
         max-width: 930px;
@@ -339,7 +357,7 @@
         align-items: end;
       }
       .sprint h2 {
-        font: 400 clamp(53px, 6vw, 78px)/0.92 var(--serif);
+        font: 400 clamp(53px, 6vw, 78px) / 0.92 var(--serif);
         letter-spacing: -0.03em;
         margin: 18px 0 24px;
       }
@@ -373,6 +391,55 @@
       .deliverable:nth-child(even) {
         padding-left: 28px;
         border-left: 1px solid var(--line);
+      }
+      .semi-private {
+        display: grid;
+        grid-template-columns: 0.7fr 1.3fr;
+        gap: 64px;
+        margin-top: 64px;
+        padding: 44px;
+        border: 1px solid var(--line);
+        background: var(--cream);
+      }
+      .semi-private h3 {
+        margin: 12px 0 15px;
+        font: 400 42px/0.95 var(--serif);
+      }
+      .semi-private > div:first-child > p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .mechanism-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-top: 1px solid var(--line);
+        border-left: 1px solid var(--line);
+      }
+      .mechanism-card {
+        min-height: 150px;
+        padding: 22px;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        background: var(--paper);
+      }
+      .mechanism-card span {
+        display: block;
+        margin-bottom: 9px;
+        color: var(--rust);
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+      .mechanism-card h4 {
+        margin: 0 0 8px;
+        font: 400 24px/1 var(--serif);
+      }
+      .mechanism-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 12px;
       }
       .offer-stack {
         margin-top: 64px;
@@ -477,6 +544,31 @@
         letter-spacing: 0.1em;
         text-transform: uppercase;
       }
+      .founding-price-note {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 22px;
+        align-items: center;
+        margin: 18px 0 0;
+        padding: 22px 26px;
+        border: 1px solid var(--line);
+        background: var(--cream);
+      }
+      .founding-price-note b {
+        color: var(--rust);
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .founding-price-note p {
+        margin: 0;
+        color: #4d5b66;
+        font-size: 13px;
+      }
+      .founding-price-note strong {
+        white-space: nowrap;
+        font: 400 25px var(--serif);
+      }
       .milestones-head {
         display: grid;
         grid-template-columns: 0.8fr 1.2fr;
@@ -537,7 +629,7 @@
         margin-bottom: 52px;
       }
       .fit h2 {
-        font: 400 clamp(53px, 6vw, 78px)/0.92 var(--serif);
+        font: 400 clamp(53px, 6vw, 78px) / 0.92 var(--serif);
         letter-spacing: -0.03em;
         margin: 18px 0 0;
       }
@@ -598,7 +690,7 @@
       }
       .evidence h2,
       .director h2 {
-        font: 400 clamp(56px, 6vw, 82px)/0.9 var(--serif);
+        font: 400 clamp(56px, 6vw, 82px) / 0.9 var(--serif);
         letter-spacing: -0.03em;
         margin: 17px 0 0;
       }
@@ -934,6 +1026,59 @@
         font-size: 11px;
         text-align: center;
       }
+      .proof-standard-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        margin-top: 58px;
+        border-top: 1px solid #3e4952;
+        border-bottom: 1px solid #3e4952;
+      }
+      .proof-requirement {
+        min-height: 250px;
+        padding: 29px 22px 31px 0;
+      }
+      .proof-requirement + .proof-requirement {
+        padding-left: 22px;
+        border-left: 1px solid #3e4952;
+      }
+      .proof-requirement small {
+        display: block;
+        margin-bottom: 32px;
+        color: var(--rust);
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+      .proof-requirement h3 {
+        margin: 0 0 12px;
+        font: 400 27px/1 var(--serif);
+      }
+      .proof-requirement p {
+        margin: 0;
+        color: #aeb9c0;
+        font-size: 13px;
+      }
+      .proof-approval {
+        display: flex;
+        justify-content: space-between;
+        gap: 36px;
+        align-items: center;
+        margin-top: 28px;
+        padding: 28px 32px;
+        border-left: 5px solid var(--rust);
+        background: #152635;
+      }
+      .proof-approval strong {
+        flex: 0 0 190px;
+        color: var(--blue);
+        font: 400 27px/1 var(--serif);
+      }
+      .proof-approval p {
+        margin: 0;
+        color: #c4cdd2;
+        font-size: 13px;
+      }
       .director {
         padding: 120px 0;
       }
@@ -1017,7 +1162,7 @@
         align-items: center;
       }
       .cta h2 {
-        font: 400 clamp(52px, 6vw, 80px)/0.9 var(--serif);
+        font: 400 clamp(52px, 6vw, 80px) / 0.9 var(--serif);
         margin: 0 0 16px;
       }
       .cta p {
@@ -1112,6 +1257,23 @@
         min-height: 85px;
         resize: vertical;
       }
+      .commit-check {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 11px;
+        align-items: start;
+        padding: 14px;
+        border: 1px solid var(--line);
+        background: #fff;
+        color: #45535e;
+        font-size: 12px;
+      }
+      .commit-check input {
+        width: 17px;
+        height: 17px;
+        margin: 1px 0 0;
+        accent-color: var(--rust);
+      }
       .form-action {
         margin-top: 24px;
       }
@@ -1197,6 +1359,7 @@
         .stories-head,
         .story-feature,
         .story-grid,
+        .semi-private,
         .director-grid,
         .cta-grid,
         .milestones-head {
@@ -1237,6 +1400,10 @@
         .sprint-grid {
           gap: 45px;
         }
+        .semi-private {
+          gap: 32px;
+          padding: 34px;
+        }
         .offer-step {
           grid-template-columns: 55px minmax(0, 1fr);
           gap: 20px;
@@ -1262,6 +1429,10 @@
           flex-direction: column;
           gap: 7px;
           padding: 20px 28px;
+        }
+        .founding-price-note {
+          grid-template-columns: 1fr;
+          gap: 8px;
         }
         .milestones-head {
           gap: 18px;
@@ -1298,6 +1469,29 @@
         .story-grid {
           gap: 14px;
         }
+        .proof-standard-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .proof-requirement {
+          min-height: 210px;
+          padding: 26px 24px;
+          border-bottom: 1px solid #3e4952;
+        }
+        .proof-requirement + .proof-requirement {
+          padding-left: 24px;
+        }
+        .proof-requirement:nth-child(3),
+        .proof-requirement:nth-child(5) {
+          border-left: 0;
+        }
+        .proof-requirement:nth-child(5) {
+          grid-column: 1/-1;
+        }
+        .proof-approval {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 12px;
+        }
         .story-card {
           min-height: 0;
         }
@@ -1324,11 +1518,15 @@
           height: 330px;
         }
         .deliverables,
+        .mechanism-grid,
         .credentials,
         .form-grid,
         .booking-options,
         .milestones {
           grid-template-columns: 1fr;
+        }
+        .semi-private {
+          padding: 28px 22px;
         }
         .deliverable:nth-child(even) {
           padding-left: 0;
@@ -1384,6 +1582,19 @@
         .story-copy h3 {
           font-size: 39px;
         }
+        .proof-standard-grid {
+          grid-template-columns: 1fr;
+        }
+        .proof-requirement,
+        .proof-requirement + .proof-requirement {
+          min-height: 0;
+          padding: 25px 0;
+          border-left: 0;
+          border-bottom: 1px solid #3e4952;
+        }
+        .proof-requirement:nth-child(5) {
+          grid-column: auto;
+        }
         .story-quote {
           min-height: 340px;
           font-size: 30px;
@@ -1424,10 +1635,10 @@
         </button>
         <nav class="links">
           <a href="#sprint">The Academy</a><a href="#fit">Fit</a
-          ><a href="#evidence">The standard</a><a href="#stories">Stories</a
-          ><a href="#about">Leadership</a
+          ><a href="#evidence">The standard</a
+          ><a href="#stories">Proof policy</a><a href="#about">Leadership</a
           ><button class="button review-trigger" type="button">
-            Start readiness
+            Apply now
           </button>
         </nav>
       </div>
@@ -1437,21 +1648,30 @@
       <section class="hero">
         <div class="wrap hero-grid">
           <div>
-            <div class="label">Selective mathematics academy · Grades 4–6</div>
+            <div class="label">
+              Founding semi-private Academy · Grades 4–6 · Charleston
+            </div>
             <h1>An A should be the starting point—not the <em>ceiling.</em></h1>
-            <p class="hero-promise">Build for the math ahead.</p>
+            <p class="hero-promise">
+              Build the reasoning school grades do not always reveal.
+            </p>
             <p class="hero-copy">
-              For capable students ready to turn potential into command—through
-              deeper reasoning, deliberate practice, and visible evidence of
-              readiness.
+              A 12-week mathematics transformation for capable students who can
+              get the answer—but cannot always explain why. Four students
+              maximum, individually matched tasks, and visible evidence every
+              four weeks.
             </p>
             <div class="actions">
               <button class="button review-trigger" type="button">
-                Start my complimentary readiness process</button
+                Apply for a founding seat</button
               ><a class="button outline" href="#sprint"
-                >See the 12-week Academy</a
+                >See how semi-private works</a
               >
             </div>
+            <p class="founding-note">
+              Founding cohort policy: two groups, eight accepted students total,
+              with the $399 tuition rate reserved while continuously enrolled.
+            </p>
           </div>
           <div
             class="hero-art"
@@ -1507,10 +1727,12 @@
           <div class="sprint-grid">
             <div>
               <div class="label">02 / The experience</div>
-              <h2>The 12-Week Algebra Ready Academy</h2>
+              <h2>The 12-Week Semi-Private Algebra Ready Academy</h2>
               <p class="sprint-intro">
-                A diagnostic-first small-group program that turns hidden gaps
-                into visible progress—in three focused four-week chapters.
+                A diagnostic-first program where students share a mathematical
+                domain while working at individually matched entry points.
+                Progress is taught, tested, and shown across three focused
+                four-week chapters.
               </p>
               <p class="sequence">
                 See the gap → Launch the plan → Build the skill → Prove the
@@ -1534,6 +1756,55 @@
               <div class="deliverable" role="listitem">
                 Weekly parent progress updates
               </div>
+            </div>
+          </div>
+          <div
+            class="semi-private"
+            aria-label="How semi-private instruction works"
+          >
+            <div>
+              <div class="proof-kicker">The semi-private advantage</div>
+              <h3>Same domain. Different entry points.</h3>
+              <p>
+                A fraction group might all study magnitude while one student
+                uses models, another uses benchmarks, another proves
+                equivalence, and another tackles unfamiliar multi-step transfer.
+                The group creates energy; the work stays personal.
+              </p>
+            </div>
+            <div class="mechanism-grid" role="list">
+              <article class="mechanism-card" role="listitem">
+                <span>01 / Shared focus</span>
+                <h4>One mathematical domain</h4>
+                <p>
+                  Students can discuss, compare, and learn from multiple ways of
+                  thinking about the same important idea.
+                </p>
+              </article>
+              <article class="mechanism-card" role="listitem">
+                <span>02 / Personal path</span>
+                <h4>Individual progression</h4>
+                <p>
+                  Each task, prompt, and next step is matched to the student’s
+                  readiness evidence—not simply a grade-level worksheet.
+                </p>
+              </article>
+              <article class="mechanism-card" role="listitem">
+                <span>03 / Live coaching</span>
+                <h4>Question. Correct. Extend.</h4>
+                <p>
+                  The coach rotates deliberately, listens to reasoning, corrects
+                  misconceptions, and raises the demand at the right moment.
+                </p>
+              </article>
+              <article class="mechanism-card" role="listitem">
+                <span>04 / Real proof</span>
+                <h4>Independent transfer</h4>
+                <p>
+                  Progress counts when the student can explain and apply the
+                  idea without being rescued by a familiar example.
+                </p>
+              </article>
             </div>
           </div>
           <div class="offer-stack" aria-label="Enrollment and pricing">
@@ -1571,11 +1842,13 @@
             <article class="offer-step">
               <div class="offer-number" aria-hidden="true">03</div>
               <div class="offer-copy">
-                <h3>Academy tuition</h3>
+                <h3>Founding Academy tuition</h3>
                 <p>
                   Each tuition period includes four 60-minute small-group
                   sessions—one per week—plus targeted practice, weekly parent
                   updates, progress tracking, and a four-week evidence review.
+                  The founding rate is capped at the first eight accepted
+                  students.
                 </p>
               </div>
               <div class="offer-price">
@@ -1589,8 +1862,9 @@
                 <p>
                   The initial term includes three $399 tuition payments: when
                   the Academy begins, at Week 5, and at Week 9. After Week 12,
-                  we compare the evidence and recommend graduation or continued
-                  Academy support at $399 every four weeks.
+                  we compare the evidence and prescribe graduation or continued
+                  Academy support. Founding students who continue without a
+                  break keep the $399 tuition rate.
                 </p>
               </div>
               <div class="commitment-total">
@@ -1603,10 +1877,20 @@
             <strong>See the evidence before you decide.</strong>
             <span
               >No payment is collected before the assessment results meeting.
-              The $299 Launch Package is paid only if you choose to
-              enroll.</span
+              The $299 Launch Package is paid only if you choose to enroll. The
+              first $399 tuition payment begins when Academy instruction
+              begins.</span
             >
           </p>
+          <div class="founding-price-note">
+            <b>Founding cohort</b>
+            <p>
+              This is a capped proof-building rate for the first eight accepted
+              students—not a permanent public price. A student who pauses and
+              later returns enters at the then-current tuition.
+            </p>
+            <strong>Planned public tuition: $599 / 4 weeks</strong>
+          </div>
           <div class="milestones-head">
             <h3>Clear wins. No vague progress.</h3>
             <p>
@@ -1633,19 +1917,20 @@
               </p>
             </article>
             <article class="milestone">
-              <small>Week 8 · Transfer check</small>
-              <h4>Test whether it holds.</h4>
+              <small>Week 8 · Transfer + next prescription</small>
+              <h4>Test it. Plan ahead.</h4>
               <p>
-                See whether the skill transfers to less familiar problems—and
-                how the plan adjusts when it does not.
+                See whether the skill transfers to less familiar problems and
+                discuss graduation or continuation while the evidence is fresh.
               </p>
             </article>
             <article class="milestone">
-              <small>Week 12 · Proof + next plan</small>
-              <h4>Compare. Decide. Move forward.</h4>
+              <small>Week 12 · Reassess + record</small>
+              <h4>Compare. Prescribe. Move forward.</h4>
               <p>
                 Compare reassessment evidence with the baseline and receive a
-                clear graduation or continuation recommendation.
+                clear graduation or continuation recommendation. Feedback is
+                requested only after the record is complete.
               </p>
             </article>
           </div>
@@ -1671,9 +1956,7 @@
                 <li>
                   Earns acceptable grades but is not consistently challenged
                 </li>
-                <li>
-                  Knows procedures but struggles to explain why they work
-                </li>
+                <li>Knows procedures but struggles to explain why they work</li>
                 <li>
                   Has hidden gaps in fractions, number sense, or multi-step
                   reasoning
@@ -1720,9 +2003,9 @@
             </p>
           </div>
           <p class="illustrative-note">
-            The profile and learning progression below are illustrative
-            examples of how Algebra Ready documents progress. They are not
-            presented as results from a specific student.
+            The profile and learning progression below are illustrative examples
+            of how Algebra Ready documents progress. They are not presented as
+            results from a specific student.
           </p>
           <div class="proof-board">
             <div class="scorecard">
@@ -1851,8 +2134,8 @@
             </article>
           </div>
           <p class="disclaimer">
-            Illustrative examples demonstrate the reporting method; they are
-            not testimonials or claims about a specific student. Published case
+            Illustrative examples demonstrate the reporting method; they are not
+            testimonials or claims about a specific student. Published case
             studies will use verified baseline and reassessment evidence and
             family-approved verbatim quotations. Individual experiences vary,
             and Algebra Ready does not guarantee specific grades, test scores,
@@ -1864,129 +2147,70 @@
         <div class="wrap">
           <div class="stories-head">
             <div>
-              <div class="label">05 / Parent outcomes</div>
-              <h2>What deeper understanding looks like in real life.</h2>
+              <div class="label">05 / Proof policy</div>
+              <h2>Proof must be earned before it is published.</h2>
             </div>
             <p>
-              Four anonymized snapshots based on responses from families of
-              students Matthew has taught. Student names, schools, and other
-              identifying details have been removed.
+              Historical parent observations remain off this page until the
+              exact wording is approved. Current Academy case studies will be
+              published only after the complete evidence chain exists.
             </p>
           </div>
-          <article class="story-feature">
-            <div class="story-index" aria-hidden="true">01</div>
-            <div class="story-copy">
-              <div class="proof-kicker">
-                Featured alumni outcome snapshot · Strong grades, hidden gap
-              </div>
-              <h3>An A was only the starting point.</h3>
+          <div
+            class="proof-standard-grid"
+            role="list"
+            aria-label="Case study publication requirements"
+          >
+            <article class="proof-requirement" role="listitem">
+              <small>01 / Context</small>
+              <h3>Grade + starting point</h3>
               <p>
-                She earned strong grades, but familiar answers masked a lack of
-                conceptual depth. When a problem changed form or became more
-                demanding, she was more likely to disengage than reason her way
-                through it.
+                Record the student’s grade, relevant context, and the precise
+                problem the Academy was asked to address.
               </p>
-              <div class="case-arc" role="list" aria-label="Outcome summary">
-                <div class="case-step" role="listitem">
-                  <span>Starting point</span>
-                  <p>Good grades with short, surface-level explanations.</p>
-                </div>
-                <div class="case-step" role="listitem">
-                  <span>Priority</span>
-                  <p>
-                    Explain relationships, persist through unfamiliar questions,
-                    and reason beyond a memorized procedure.
-                  </p>
-                </div>
-                <div class="case-step" role="listitem">
-                  <span>Transfer</span>
-                  <p>
-                    At a grocery store, she independently compared 3/4 and 2/3
-                    and worked through the reasoning beside the cart.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <blockquote class="story-quote">
-              <span
-                >It is worth it—especially if you have a child who is doing
-                fine, but you want to push them to see their potential.</span
-              >
-              <cite>Suzanne M. · Parent of a former student</cite>
-            </blockquote>
-          </article>
-          <div class="story-grid">
-            <article class="story-card">
-              <div class="proof-kicker">Parent testimonial · Engagement</div>
-              <h3>When shaky foundations looked like disinterest.</h3>
-              <p>
-                His parent initially saw a child who simply did not care about
-                math. The assessment suggested that uncertainty in foundational
-                concepts was making it difficult for him to engage. As those
-                foundations strengthened, she saw him begin to want to attend
-                math class and develop a lasting appreciation for the subject.
-              </p>
-              <div class="story-detail">
-                <strong>Continuing priority</strong>
-                Strengthening fraction-to-decimal conversions.
-              </div>
-              <blockquote>
-                “If you want your child to do more than say, ‘Two is the
-                answer’—to explain why it is two and whether it could be
-                anything else—I would really consider Algebra Ready.”
-                <cite>Emma · Parent</cite>
-              </blockquote>
             </article>
-            <article class="story-card">
-              <div class="proof-kicker">
-                Parent outcome snapshot · Place value
-              </div>
-              <h3>Strong potential, but an important idea was missing.</h3>
+            <article class="proof-requirement" role="listitem">
+              <small>02 / Baseline</small>
+              <h3>Original evidence</h3>
               <p>
-                She knew that one million was greater than one hundred thousand,
-                but she could not clearly explain why. The work strengthened the
-                relationships among place value, fractions, and decimals so she
-                had more than a procedure to rely on when questions became less
-                familiar.
+                Preserve a dated work sample, assessment result, or reasoning
+                transcript that shows what the student could do independently.
               </p>
-              <div class="story-detail">
-                <strong>Parent-reported context</strong>
-                Her parent later reported strong performance on MAP and a
-                practice college-readiness assessment.
-              </div>
-              <blockquote>
-                “It’s worth it. Do it. I’d do it ten times over.”
-                <cite>Susie · Parent</cite>
-              </blockquote>
             </article>
-            <article class="story-card">
-              <div class="proof-kicker">
-                Parent outcome snapshot · Higher-order reasoning
-              </div>
-              <h3>At the top of his class—but not yet at his ceiling.</h3>
+            <article class="proof-requirement" role="listitem">
+              <small>03 / Dosage</small>
+              <h3>12-session record</h3>
               <p>
-                He earned strong grades but was often disengaged. The assessment
-                identified higher-order reasoning as the next opportunity. His
-                parent then saw him begin attacking demanding questions instead
-                of pushing them aside.
+                Document attendance, targeted practice, the sequence taught, and
+                important adjustments made across the 12-week Academy.
               </p>
-              <div class="story-detail">
-                <strong>Real-world transfer</strong>
-                While waiting in line, he spontaneously connected 1/2, 50/100,
-                and 500/1,000 as equivalent representations.
-              </div>
-              <blockquote>
-                “I wish we would have done it with his older siblings.”
-                <cite>Elise · Parent</cite>
-              </blockquote>
+            </article>
+            <article class="proof-requirement" role="listitem">
+              <small>04 / Outcome</small>
+              <h3>Reassessment + transfer</h3>
+              <p>
+                Compare the baseline with a like-for-like reassessment, then
+                test whether the reasoning transfers to an unfamiliar problem.
+              </p>
+            </article>
+            <article class="proof-requirement" role="listitem">
+              <small>05 / Permission</small>
+              <h3>Exact parent approval</h3>
+              <p>
+                Send the final case study and proposed quotation to the family.
+                Publish only the exact version they approve in writing.
+              </p>
             </article>
           </div>
-          <p class="stories-note">
-            Parent responses have been edited lightly for length and clarity.
-            These individual observations are not promises of a particular
-            grade, test score, course placement, college admission, or academic
-            outcome.
-          </p>
+          <div class="proof-approval">
+            <strong>No manufactured success stories.</strong>
+            <p>
+              No family is asked to promise a positive testimonial. Permission
+              is requested only for the exact words and evidence proposed for
+              publication. Individual experiences vary; Algebra Ready does not
+              guarantee grades, test scores, course placement, or advancement.
+            </p>
+          </div>
         </div>
       </section>
       <section id="about" class="director">
@@ -2038,7 +2262,7 @@
               Matthew McSpadden<span>Founder &amp; academic director</span>
             </div>
             <button class="button outline review-trigger" type="button">
-              Start the readiness process
+              Apply for a founding seat
             </button>
           </div>
         </div>
@@ -2046,15 +2270,16 @@
       <section class="cta">
         <div class="wrap cta-grid">
           <div>
-            <h2>Start with clarity.</h2>
+            <h2>Apply for one of eight founding seats.</h2>
             <p>
-              First, a 20-minute parent call. If the fit is promising, your child
-              completes a complimentary assessment and you receive a clear
-              recommendation before deciding whether to enroll.
+              First, a 20-minute parent call. If the fit is promising, your
+              child completes a complimentary assessment and you receive a clear
+              recommendation before deciding whether to enroll. The cohort is
+              capped by policy; no countdown or invented availability.
             </p>
           </div>
           <button class="button review-trigger" type="button">
-            Start my complimentary readiness process
+            Apply for a founding seat
           </button>
         </div>
       </section>
@@ -2087,15 +2312,15 @@
           <input
             type="hidden"
             name="_subject"
-            value="New complimentary readiness process request"
+            value="New founding Academy application"
           /><input type="hidden" name="_captcha" value="false" />
           <div class="application-step">
-            <div class="label">Readiness process · Step 1 of 2</div>
+            <div class="label">Founding application · Step 1 of 2</div>
             <h2>Tell us about your student.</h2>
             <p class="modal-copy">
               Start with a 20-minute parent call. If the fit is promising, we
               schedule the complimentary student assessment and parent results
-              meeting.
+              meeting. The Academy begins only after a clear recommendation.
             </p>
             <div class="form-grid">
               <div class="field">
@@ -2138,17 +2363,45 @@
                 </select>
               </div>
               <div class="field wide">
+                <label for="unfamiliar-response"
+                  >When a math problem looks unfamiliar, what usually
+                  happens?</label
+                ><select
+                  id="unfamiliar-response"
+                  name="Response to unfamiliar problems"
+                  required
+                >
+                  <option value="">Choose the closest answer</option>
+                  <option>Persists and explains the reasoning</option>
+                  <option>Tries briefly, then guesses or asks for help</option>
+                  <option>Avoids it, shuts down, or says it is boring</option>
+                  <option>I am not sure yet</option>
+                </select>
+              </div>
+              <div class="field wide">
                 <label for="goal"
-                  >What would you most like your child to improve or be
-                  challenged by?</label
+                  >What would meaningful progress look like over the next 12
+                  weeks?</label
                 >
                 <textarea
                   id="goal"
                   name="Primary goal"
-                  placeholder="For example: stronger fraction reasoning, more challenge, or preparation for advanced middle-school math."
+                  placeholder="For example: explain fraction relationships, persist through unfamiliar problems, or prepare for advanced middle-school math."
                   required
                 ></textarea>
               </div>
+              <label class="commit-check field wide">
+                <input
+                  type="checkbox"
+                  name="12-week participation commitment"
+                  value="Yes"
+                  required
+                />
+                <span
+                  >If accepted, our family can support weekly attendance and the
+                  short targeted practice assigned between sessions.</span
+                >
+              </label>
             </div>
             <button
               class="button form-action"
@@ -2162,11 +2415,11 @@
             <button class="back-button" type="button" id="back-application">
               ← Back to student details
             </button>
-            <div class="label">Readiness process · Step 2 of 2</div>
-            <h2>Choose your 20-minute parent-call time.</h2>
+            <div class="label">Founding application · Step 2 of 2</div>
+            <h2>Request a 20-minute parent-call window.</h2>
             <p class="modal-copy">
-              Select the 20-minute window that works best. We will confirm it by
-              phone.
+              These are preferred windows, not instant appointments. Select the
+              best option and we will confirm a specific date and time by phone.
             </p>
             <div class="booking-options">
               <label class="time-option"
@@ -2196,12 +2449,10 @@
                 /><span>Thursday · 6:30 PM</span></label
               >
             </div>
-            <button class="button" type="submit">
-              Request my readiness call
-            </button>
+            <button class="button" type="submit">Submit my application</button>
             <p class="form-note">
-              Your information is used only to coordinate the readiness
-              process. No obligation, no mailing list.
+              Your information is used only to coordinate the readiness process.
+              No obligation, no mailing list.
             </p>
           </div>
         </form>
