@@ -373,6 +373,66 @@
         padding-left: 28px;
         border-left: 1px solid var(--line);
       }
+      .fit {
+        padding: 110px 0;
+        background: var(--blue);
+      }
+      .fit-head {
+        display: grid;
+        grid-template-columns: 1fr 0.7fr;
+        gap: 70px;
+        align-items: end;
+        margin-bottom: 52px;
+      }
+      .fit h2 {
+        font: 400 clamp(53px, 6vw, 78px)/0.92 var(--serif);
+        letter-spacing: -0.03em;
+        margin: 18px 0 0;
+      }
+      .fit-head > p {
+        max-width: 480px;
+        margin: 0;
+        color: #3f515d;
+      }
+      .fit-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+      .fit-card {
+        padding: 44px;
+        border: 1px solid rgba(16, 29, 42, 0.22);
+        background: var(--paper);
+      }
+      .fit-card.not-fit {
+        background: var(--night);
+        color: #fff;
+      }
+      .fit-card h3 {
+        margin: 0 0 25px;
+        font: 400 34px/1 var(--serif);
+      }
+      .fit-card ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .fit-card li {
+        position: relative;
+        padding: 16px 0 16px 28px;
+        border-top: 1px solid var(--line);
+        color: #45535e;
+      }
+      .fit-card li:before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--rust);
+      }
+      .fit-card.not-fit li {
+        border-color: #3e4952;
+        color: #b7c1c8;
+      }
       .evidence {
         padding: 120px 0;
         background: var(--cream);
@@ -393,6 +453,13 @@
       .evidence-head p {
         color: var(--muted);
         margin: 0;
+      }
+      .illustrative-note {
+        margin: -34px 0 28px;
+        padding-left: 15px;
+        border-left: 2px solid var(--rust);
+        color: var(--muted);
+        font-size: 12px;
       }
       .proof-board {
         display: grid;
@@ -533,6 +600,28 @@
         letter-spacing: 0.12em;
         text-transform: uppercase;
       }
+      .evidence-item {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        gap: 18px;
+        padding: 21px 0;
+        border-top: 1px solid var(--line);
+      }
+      .evidence-item b {
+        color: var(--rust);
+        font: 400 23px var(--serif);
+      }
+      .evidence-item h4 {
+        margin: 1px 0 5px;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .evidence-item p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
       .disclaimer {
         max-width: 820px;
         margin: 30px auto 0;
@@ -574,10 +663,34 @@
         color: var(--muted);
         font-size: 17px;
       }
+      .credentials {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 30px;
+        border-top: 1px solid var(--line);
+        border-left: 1px solid var(--line);
+      }
+      .credential {
+        min-height: 112px;
+        padding: 20px;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+      .credential span {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--rust);
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+      .credential strong {
+        display: block;
+        font: 400 20px/1.15 var(--serif);
+      }
       .signature {
         margin: 32px 0 38px;
-        padding-top: 21px;
-        border-top: 1px solid var(--line);
         font: 400 26px var(--serif);
       }
       .signature span {
@@ -771,6 +884,8 @@
         .hero-grid,
         .belief-grid,
         .sprint-grid,
+        .fit-head,
+        .fit-grid,
         .evidence-head,
         .proof-board,
         .real-proof,
@@ -803,6 +918,7 @@
           border-top: 1px solid #3e4952;
         }
         .sprint,
+        .fit,
         .evidence,
         .belief,
         .director {
@@ -837,6 +953,7 @@
           height: 330px;
         }
         .deliverables,
+        .credentials,
         .form-grid,
         .booking-options {
           grid-template-columns: 1fr;
@@ -873,12 +990,17 @@
       <div class="wrap nav">
         <a class="brand" href="#top"
           ><span class="brand-mark">A</span>ALGEBRA READY</a
-        ><button class="menu" aria-label="Open menu" aria-expanded="false">
+        ><button
+          class="menu"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
           ☰
         </button>
         <nav class="links">
-          <a href="#academy">The idea</a><a href="#evidence">The standard</a
-          ><a href="#about">Leadership</a
+          <a href="#academy">The idea</a><a href="#fit">Fit</a
+          ><a href="#evidence">The standard</a><a href="#about">Leadership</a
           ><button class="button review-trigger" type="button">
             Request a review
           </button>
@@ -908,6 +1030,7 @@
           </div>
           <div
             class="hero-art"
+            role="img"
             aria-label="A graphic representation of mathematical potential"
           >
             <div class="formula">x<sup>+</sup></div>
@@ -967,14 +1090,90 @@
               Assess → Prioritize → Teach → Reassess → Recommend
             </p>
           </div>
-          <div class="deliverables" aria-label="Sprint deliverables">
-            <div class="deliverable">Comprehensive readiness assessment</div>
-            <div class="deliverable">Personalized learning sequence</div>
-            <div class="deliverable">Eight weekly sessions</div>
-            <div class="deliverable">Targeted practice</div>
-            <div class="deliverable">Week 4 instructional review</div>
-            <div class="deliverable">Final reassessment</div>
-            <div class="deliverable">Written 90-day recommendation</div>
+          <div
+            class="deliverables"
+            role="list"
+            aria-label="Sprint deliverables"
+          >
+            <div class="deliverable" role="listitem">
+              Comprehensive readiness assessment
+            </div>
+            <div class="deliverable" role="listitem">
+              Personalized learning sequence
+            </div>
+            <div class="deliverable" role="listitem">
+              No more than four students per group
+            </div>
+            <div class="deliverable" role="listitem">
+              Eight weekly 60-minute sessions
+            </div>
+            <div class="deliverable" role="listitem">
+              Targeted between-session practice
+            </div>
+            <div class="deliverable" role="listitem">
+              Weekly parent progress updates
+            </div>
+            <div class="deliverable" role="listitem">
+              Week 4 instructional review
+            </div>
+            <div class="deliverable" role="listitem">
+              Final reassessment + written 90-day plan
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="fit" class="fit">
+        <div class="wrap">
+          <div class="fit-head">
+            <div>
+              <div class="label">03 / Readiness &amp; fit</div>
+              <h2>The right structure for the right student.</h2>
+            </div>
+            <p>
+              Selectivity protects the quality of the group. The readiness
+              review is used to determine whether the Sprint matches the
+              student’s needs, goals, and working habits.
+            </p>
+          </div>
+          <div class="fit-grid">
+            <article class="fit-card">
+              <h3>Algebra Ready may be a strong fit if your child:</h3>
+              <ul>
+                <li>
+                  Earns acceptable grades but is not consistently challenged
+                </li>
+                <li>
+                  Knows procedures but struggles to explain why they work
+                </li>
+                <li>
+                  Has hidden gaps in fractions, number sense, or multi-step
+                  reasoning
+                </li>
+                <li>
+                  Is preparing for more advanced middle-school mathematics
+                </li>
+                <li>
+                  Responds well to high expectations and deliberate practice
+                </li>
+              </ul>
+            </article>
+            <article class="fit-card not-fit">
+              <h3>It may not be the right fit if:</h3>
+              <ul>
+                <li>
+                  You are looking primarily for homework completion or drop-in
+                  tutoring
+                </li>
+                <li>
+                  Your child needs intensive intervention beyond a small-group
+                  setting
+                </li>
+                <li>
+                  Consistent attendance and between-session practice are not
+                  possible
+                </li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
@@ -982,7 +1181,7 @@
         <div class="wrap">
           <div class="evidence-head">
             <div>
-              <div class="label">03 / The standard</div>
+              <div class="label">04 / The standard</div>
               <h2>Progress you can see.</h2>
             </div>
             <p>
@@ -991,11 +1190,16 @@
               visible.
             </p>
           </div>
+          <p class="illustrative-note">
+            The profile and learning progression below are illustrative
+            examples of how Algebra Ready documents progress. They are not
+            presented as results from a specific student.
+          </p>
           <div class="proof-board">
             <div class="scorecard">
               <div class="scorecard-head">
                 <span>Readiness profile</span
-                ><span>Sample Readiness Profile</span>
+                ><span>Illustrative reporting format</span>
               </div>
               <div class="measure">
                 <span>Number sense</span>
@@ -1057,11 +1261,14 @@
           </div>
           <div class="real-proof">
             <article class="work-sample">
-              <div class="proof-kicker">Anonymized student roadmap</div>
-              <h3>From answer-getting to mathematical command.</h3>
+              <div class="proof-kicker">Illustrative learning progression</div>
+              <h3>From a visible gap to mathematical command.</h3>
               <div class="sample-row">
-                <span>Before</span>
-                <p>“3/4 is bigger because 4 is bigger than 3.”</p>
+                <span>Starting point</span>
+                <p>
+                  Compares fractions by looking only at the denominator rather
+                  than the size of the parts.
+                </p>
               </div>
               <div class="sample-row">
                 <span>Priority</span>
@@ -1071,36 +1278,55 @@
                 </p>
               </div>
               <div class="sample-row">
-                <span>After</span>
+                <span>Target evidence</span>
                 <p>
-                  “3/4 is three 1/4 pieces. It is greater than 2/3 because 3/4
-                  is 9/12 and 2/3 is 8/12.”
+                  Independently compares 3/4 and 2/3 using benchmarks or
+                  equivalence and explains why the comparison is true.
                 </p>
               </div>
             </article>
             <article class="observations">
-              <div class="proof-kicker">Parent observations</div>
-              <h3>What families noticed.</h3>
-              <blockquote class="observation">
-                “We thought she was doing fine. The assessment showed that
-                fractions—not effort—were limiting her. Eight weeks later, she
-                could explain and defend her reasoning independently.”<cite
-                  >Parent of a fifth-grade student</cite
-                >
-              </blockquote>
-              <blockquote class="observation">
-                “He stopped asking whether an answer was right and started
-                showing us why it had to be right. His teacher noticed the
-                change before we mentioned the program.”<cite
-                  >Parent of a sixth-grade student</cite
-                >
-              </blockquote>
+              <div class="proof-kicker">Evidence for parents</div>
+              <h3>What every family receives.</h3>
+              <div class="evidence-item">
+                <b>01</b>
+                <div>
+                  <h4>Baseline</h4>
+                  <p>
+                    A readiness profile that names the starting point and the
+                    highest-leverage instructional priorities.
+                  </p>
+                </div>
+              </div>
+              <div class="evidence-item">
+                <b>02</b>
+                <div>
+                  <h4>Weekly evidence</h4>
+                  <p>
+                    A concise parent update documenting what was taught, what
+                    the student demonstrated, and what comes next.
+                  </p>
+                </div>
+              </div>
+              <div class="evidence-item">
+                <b>03</b>
+                <div>
+                  <h4>Final record</h4>
+                  <p>
+                    A reassessment, a comparison of the evidence, and a written
+                    90-day recommendation.
+                  </p>
+                </div>
+              </div>
             </article>
           </div>
           <p class="disclaimer">
-            Individual student experiences and outcomes vary. Algebra Ready does
-            not guarantee specific grades, test scores, course placement, or
-            advancement.
+            Illustrative examples demonstrate the reporting method; they are
+            not testimonials or claims about a specific student. Published case
+            studies will use verified baseline and reassessment evidence and
+            family-approved verbatim quotations. Individual experiences vary,
+            and Algebra Ready does not guarantee specific grades, test scores,
+            course placement, or advancement.
           </p>
         </div>
       </section>
@@ -1114,13 +1340,41 @@
             />
           </div>
           <div class="director-copy">
-            <div class="label">04 / Academic leadership</div>
+            <div class="label">05 / Academic leadership</div>
             <h2>Designed with intention.</h2>
             <p>
               Matthew McSpadden establishes the diagnostic standard, designs
               each student’s sequence, and reviews the evidence. Families enter
               a defined academic system—not a collection of tutoring sessions.
             </p>
+            <div
+              class="credentials"
+              role="list"
+              aria-label="Academic foundation"
+            >
+              <div class="credential" role="listitem">
+                <span>Classroom practice</span>
+                <strong>Virginia-licensed elementary educator</strong>
+              </div>
+              <div class="credential" role="listitem">
+                <span>Graduate credential</span>
+                <strong
+                  >M.Ed. in Educational Technology, Western Governors
+                  University</strong
+                >
+              </div>
+              <div class="credential" role="listitem">
+                <span>Advanced study</span>
+                <strong>Graduate study in K–6 mathematics education</strong>
+              </div>
+              <div class="credential" role="listitem">
+                <span>Instructional focus</span>
+                <strong
+                  >Number sense, fluency, fractions, and mathematical
+                  reasoning</strong
+                >
+              </div>
+            </div>
             <div class="signature">
               Matthew McSpadden<span>Founder &amp; academic director</span>
             </div>
@@ -1176,7 +1430,7 @@
             <div class="label">Complimentary review · Step 1 of 2</div>
             <h2>Tell us about your student.</h2>
             <p class="modal-copy">
-              A few details help us make the readiness call focused and useful.
+              Five details help us make the readiness call focused and useful.
             </p>
             <div class="form-grid">
               <div class="field">
@@ -1184,13 +1438,10 @@
                 ><input
                   id="parent-name"
                   name="Parent name"
+                  type="text"
                   autocomplete="name"
                   required
                 />
-              </div>
-              <div class="field">
-                <label for="student-name">Student name</label
-                ><input id="student-name" name="Student name" required />
               </div>
               <div class="field">
                 <label for="email">Parent email</label
@@ -1203,33 +1454,6 @@
                 />
               </div>
               <div class="field">
-                <label for="grade">Grade</label
-                ><select id="grade" name="Grade" required>
-                  <option value="">Select grade</option>
-                  <option>4th grade</option>
-                  <option>5th grade</option>
-                  <option>6th grade</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="neighborhood">Neighborhood</label
-                ><input
-                  id="neighborhood"
-                  name="Neighborhood"
-                  autocomplete="address-level3"
-                  required
-                />
-              </div>
-              <div class="field wide">
-                <label for="concern">Primary concern</label
-                ><textarea
-                  id="concern"
-                  name="Primary concern"
-                  placeholder="What are you seeing—or hoping to see—in math?"
-                  required
-                ></textarea>
-              </div>
-              <div class="field">
                 <label for="phone">Best phone number</label
                 ><input
                   id="phone"
@@ -1240,14 +1464,25 @@
                 />
               </div>
               <div class="field">
-                <label for="call-window">Preferred call window</label
-                ><select id="call-window" name="Preferred call window" required>
-                  <option value="">Select a window</option>
-                  <option>Weekday morning</option>
-                  <option>Weekday afternoon</option>
-                  <option>Weekday evening</option>
-                  <option>Saturday morning</option>
+                <label for="grade">Grade</label
+                ><select id="grade" name="Grade" required>
+                  <option value="">Select grade</option>
+                  <option>4th grade</option>
+                  <option>5th grade</option>
+                  <option>6th grade</option>
                 </select>
+              </div>
+              <div class="field wide">
+                <label for="goal"
+                  >What would you most like your child to improve or be
+                  challenged by?</label
+                >
+                <textarea
+                  id="goal"
+                  name="Primary goal"
+                  placeholder="For example: stronger fraction reasoning, more challenge, or preparation for advanced middle-school math."
+                  required
+                ></textarea>
               </div>
             </div>
             <button
