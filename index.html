@@ -629,6 +629,159 @@
         font-size: 11px;
         text-align: center;
       }
+      .stories {
+        padding: 120px 0;
+        background: var(--night);
+        color: #fff;
+      }
+      .stories-head {
+        display: grid;
+        grid-template-columns: 1fr 0.55fr;
+        gap: 80px;
+        align-items: end;
+      }
+      .stories h2 {
+        max-width: 850px;
+        margin: 17px 0 0;
+        font: 400 clamp(54px, 6vw, 82px) / 0.9 var(--serif);
+        letter-spacing: -0.03em;
+      }
+      .stories-head > p {
+        margin: 0;
+        color: #aeb9c0;
+      }
+      .story-feature {
+        display: grid;
+        grid-template-columns: 78px 1.15fr 0.85fr;
+        margin-top: 58px;
+        border-top: 5px solid var(--rust);
+        background: var(--paper);
+        color: var(--night);
+      }
+      .story-index {
+        padding: 48px 24px;
+        border-right: 1px solid var(--line);
+        color: var(--rust);
+        font: 400 28px var(--serif);
+        text-align: center;
+      }
+      .story-copy {
+        padding: 48px;
+      }
+      .story-copy h3 {
+        max-width: 570px;
+        margin: 14px 0 19px;
+        font: 400 46px/0.95 var(--serif);
+      }
+      .story-copy > p {
+        max-width: 650px;
+        margin: 0;
+        color: var(--muted);
+      }
+      .case-arc {
+        margin-top: 31px;
+        border-top: 1px solid var(--line);
+      }
+      .case-step {
+        display: grid;
+        grid-template-columns: 108px 1fr;
+        gap: 20px;
+        padding: 18px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .case-step span {
+        color: var(--rust);
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+      .case-step p {
+        margin: 0;
+        font-size: 13px;
+      }
+      .story-quote {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+        padding: 48px;
+        background: var(--blue);
+        color: var(--night);
+        font: 400 34px/1.05 var(--serif);
+      }
+      .story-quote:before {
+        content: "“";
+        color: var(--rust);
+        font: 400 70px/0.5 var(--serif);
+      }
+      .story-quote cite,
+      .story-card cite {
+        display: block;
+        margin-top: 28px;
+        font: 600 9px var(--sans);
+        font-style: normal;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+      .story-quote cite {
+        color: #425661;
+      }
+      .story-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 18px;
+      }
+      .story-card {
+        display: flex;
+        min-height: 500px;
+        flex-direction: column;
+        padding: 38px;
+        border: 1px solid #3e4952;
+        background: #152635;
+      }
+      .story-card h3 {
+        margin: 14px 0 18px;
+        font: 400 35px/1 var(--serif);
+      }
+      .story-card > p {
+        margin: 0;
+        color: #b5c0c7;
+        font-size: 14px;
+      }
+      .story-detail {
+        margin: 23px 0 0;
+        padding: 17px 0;
+        border-top: 1px solid #3e4952;
+        border-bottom: 1px solid #3e4952;
+        color: #d8e0e4;
+        font-size: 12px;
+      }
+      .story-detail strong {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--rust);
+        font-size: 9px;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+      .story-card blockquote {
+        margin: auto 0 0;
+        padding-top: 28px;
+        color: #fff;
+        font: 400 24px/1.2 var(--serif);
+      }
+      .story-card cite {
+        color: #91a0aa;
+      }
+      .stories-note {
+        max-width: 900px;
+        margin: 28px auto 0;
+        color: #8f9ca5;
+        font-size: 11px;
+        text-align: center;
+      }
       .director {
         padding: 120px 0;
       }
@@ -889,6 +1042,9 @@
         .evidence-head,
         .proof-board,
         .real-proof,
+        .stories-head,
+        .story-feature,
+        .story-grid,
         .director-grid,
         .cta-grid {
           grid-template-columns: 1fr;
@@ -921,6 +1077,7 @@
         .fit,
         .evidence,
         .belief,
+        .stories,
         .director {
           padding: 80px 0;
         }
@@ -929,6 +1086,21 @@
         }
         .proof-note {
           flex-direction: column;
+        }
+        .stories-head {
+          gap: 30px;
+        }
+        .story-index {
+          padding: 18px 28px;
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+          text-align: left;
+        }
+        .story-grid {
+          gap: 14px;
+        }
+        .story-card {
+          min-height: 0;
         }
         .director-grid {
           gap: 55px;
@@ -965,8 +1137,22 @@
         .scorecard,
         .process,
         .work-sample,
-        .observations {
+        .observations,
+        .story-copy,
+        .story-quote,
+        .story-card {
           padding: 30px 24px;
+        }
+        .story-copy h3 {
+          font-size: 39px;
+        }
+        .story-quote {
+          min-height: 340px;
+          font-size: 30px;
+        }
+        .case-step {
+          grid-template-columns: 1fr;
+          gap: 6px;
         }
         .measure {
           grid-template-columns: 95px 1fr 35px;
@@ -1000,7 +1186,8 @@
         </button>
         <nav class="links">
           <a href="#academy">The idea</a><a href="#fit">Fit</a
-          ><a href="#evidence">The standard</a><a href="#about">Leadership</a
+          ><a href="#evidence">The standard</a><a href="#stories">Stories</a
+          ><a href="#about">Leadership</a
           ><button class="button review-trigger" type="button">
             Request a review
           </button>
@@ -1330,6 +1517,136 @@
           </p>
         </div>
       </section>
+      <section id="stories" class="stories">
+        <div class="wrap">
+          <div class="stories-head">
+            <div>
+              <div class="label">05 / Parent outcomes</div>
+              <h2>What deeper understanding looks like in real life.</h2>
+            </div>
+            <p>
+              Four anonymized snapshots based on responses from families of
+              students Matthew has taught. Student names, schools, and other
+              identifying details have been removed.
+            </p>
+          </div>
+          <article class="story-feature">
+            <div class="story-index" aria-hidden="true">01</div>
+            <div class="story-copy">
+              <div class="proof-kicker">
+                Featured alumni outcome snapshot · Strong grades, hidden gap
+              </div>
+              <h3>An A was only the starting point.</h3>
+              <p>
+                She earned strong grades, but familiar answers masked a lack of
+                conceptual depth. When a problem changed form or became more
+                demanding, she was more likely to disengage than reason her way
+                through it.
+              </p>
+              <div class="case-arc" role="list" aria-label="Outcome summary">
+                <div class="case-step" role="listitem">
+                  <span>Starting point</span>
+                  <p>Good grades with short, surface-level explanations.</p>
+                </div>
+                <div class="case-step" role="listitem">
+                  <span>Priority</span>
+                  <p>
+                    Explain relationships, persist through unfamiliar questions,
+                    and reason beyond a memorized procedure.
+                  </p>
+                </div>
+                <div class="case-step" role="listitem">
+                  <span>Transfer</span>
+                  <p>
+                    At a grocery store, she independently compared 3/4 and 2/3
+                    and worked through the reasoning beside the cart.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <blockquote class="story-quote">
+              <span
+                >It is worth it—especially if you have a child who is doing
+                fine, but you want to push them to see their potential.</span
+              >
+              <cite>Suzanne M. · Parent of a former student</cite>
+            </blockquote>
+          </article>
+          <div class="story-grid">
+            <article class="story-card">
+              <div class="proof-kicker">Parent testimonial · Engagement</div>
+              <h3>When shaky foundations looked like disinterest.</h3>
+              <p>
+                His parent initially saw a child who simply did not care about
+                math. The assessment suggested that uncertainty in foundational
+                concepts was making it difficult for him to engage. As those
+                foundations strengthened, she saw him begin to want to attend
+                math class and develop a lasting appreciation for the subject.
+              </p>
+              <div class="story-detail">
+                <strong>Continuing priority</strong>
+                Strengthening fraction-to-decimal conversions.
+              </div>
+              <blockquote>
+                “If you want your child to do more than say, ‘Two is the
+                answer’—to explain why it is two and whether it could be
+                anything else—I would really consider Algebra Ready.”
+                <cite>Emma · Parent</cite>
+              </blockquote>
+            </article>
+            <article class="story-card">
+              <div class="proof-kicker">
+                Parent outcome snapshot · Place value
+              </div>
+              <h3>Strong potential, but an important idea was missing.</h3>
+              <p>
+                She knew that one million was greater than one hundred thousand,
+                but she could not clearly explain why. The work strengthened the
+                relationships among place value, fractions, and decimals so she
+                had more than a procedure to rely on when questions became less
+                familiar.
+              </p>
+              <div class="story-detail">
+                <strong>Parent-reported context</strong>
+                Her parent later reported strong performance on MAP and a
+                practice college-readiness assessment. No tutoring-caused score
+                gain is claimed.
+              </div>
+              <blockquote>
+                “It’s worth it. Do it. I’d do it ten times over.”
+                <cite>Susie · Parent</cite>
+              </blockquote>
+            </article>
+            <article class="story-card">
+              <div class="proof-kicker">
+                Parent outcome snapshot · Higher-order reasoning
+              </div>
+              <h3>At the top of his class—but not yet at his ceiling.</h3>
+              <p>
+                He earned strong grades but was often disengaged. The assessment
+                identified higher-order reasoning as the next opportunity. His
+                parent then saw him begin attacking demanding questions instead
+                of pushing them aside.
+              </p>
+              <div class="story-detail">
+                <strong>Real-world transfer</strong>
+                While waiting in line, he spontaneously connected 1/2, 50/100,
+                and 500/1,000 as equivalent representations.
+              </div>
+              <blockquote>
+                “I wish we would have done it with his older siblings.”
+                <cite>Elise · Parent</cite>
+              </blockquote>
+            </article>
+          </div>
+          <p class="stories-note">
+            Parent responses have been edited lightly for length and clarity.
+            These individual observations are not promises of a particular
+            grade, test score, course placement, college admission, or academic
+            outcome.
+          </p>
+        </div>
+      </section>
       <section id="about" class="director">
         <div class="wrap director-grid">
           <div class="portrait-wrap">
@@ -1340,7 +1657,7 @@
             />
           </div>
           <div class="director-copy">
-            <div class="label">05 / Academic leadership</div>
+            <div class="label">06 / Academic leadership</div>
             <h2>Designed with intention.</h2>
             <p>
               Matthew McSpadden establishes the diagnostic standard, designs
