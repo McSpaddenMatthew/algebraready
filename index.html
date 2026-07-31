@@ -1238,9 +1238,16 @@
           gap: 45px;
         }
         .offer-step {
-          grid-template-columns: 55px minmax(0, 1fr) 190px;
+          grid-template-columns: 55px minmax(0, 1fr);
           gap: 20px;
           padding: 28px;
+        }
+        .offer-price {
+          grid-column: 2;
+          padding: 18px 0 0;
+          border-top: 1px solid var(--line);
+          border-left: 0;
+          text-align: left;
         }
         .commitment {
           grid-template-columns: 1fr;
