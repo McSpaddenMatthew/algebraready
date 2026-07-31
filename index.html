@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="Algebra Ready is a selective mathematics academy for capable students in grades 4–6 in the Charleston area."
+      content="Algebra Ready is a selective 12-week mathematics academy for capable students in grades 4–6 in the Charleston area."
     />
     <meta name="robots" content="index,follow" />
     <meta name="theme-color" content="#101d2a" />
@@ -17,7 +17,7 @@
     />
     <meta
       property="og:description"
-      content="A selective mathematics academy for capable students in grades 4–6 in the Charleston area."
+      content="A selective 12-week mathematics academy for capable students in grades 4–6 in the Charleston area."
     />
     <meta name="twitter:card" content="summary" />
     <title>Algebra Ready — An A Is the Starting Point</title>
@@ -336,6 +336,7 @@
         display: grid;
         grid-template-columns: 0.85fr 1.15fr;
         gap: 90px;
+        align-items: end;
       }
       .sprint h2 {
         font: 400 clamp(53px, 6vw, 78px)/0.92 var(--serif);
@@ -372,6 +373,157 @@
       .deliverable:nth-child(even) {
         padding-left: 28px;
         border-left: 1px solid var(--line);
+      }
+      .offer-stack {
+        margin-top: 64px;
+        border: 1px solid var(--line);
+        background: #fff;
+        box-shadow: 0 24px 70px rgba(16, 29, 42, 0.08);
+      }
+      .offer-step {
+        display: grid;
+        grid-template-columns: 70px minmax(0, 1fr) 240px;
+        gap: 28px;
+        align-items: center;
+        padding: 32px 36px;
+      }
+      .offer-step + .offer-step {
+        border-top: 1px solid var(--line);
+      }
+      .offer-step.launch {
+        background: #f5ebe4;
+      }
+      .offer-number {
+        color: var(--rust);
+        font: 400 40px/1 var(--serif);
+      }
+      .offer-copy h3 {
+        margin: 0 0 7px;
+        font: 400 29px/1.05 var(--serif);
+      }
+      .offer-copy p {
+        max-width: 690px;
+        margin: 0;
+        color: #4d5b66;
+        font-size: 14px;
+      }
+      .offer-price {
+        padding-left: 30px;
+        border-left: 1px solid var(--line);
+        text-align: right;
+      }
+      .offer-price strong {
+        display: block;
+        font: 400 44px/0.95 var(--serif);
+      }
+      .offer-price span {
+        display: block;
+        margin-top: 9px;
+        color: var(--muted);
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .commitment {
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) minmax(250px, 0.65fr);
+        gap: 48px;
+        align-items: center;
+        padding: 38px 36px;
+        background: var(--night);
+        color: #fff;
+      }
+      .commitment h3 {
+        margin: 0 0 9px;
+        font: 400 31px/1 var(--serif);
+      }
+      .commitment p {
+        margin: 0;
+        color: #b9c2c9;
+        font-size: 14px;
+      }
+      .commitment-total {
+        text-align: right;
+      }
+      .commitment-total strong {
+        display: block;
+        color: #fff;
+        font: 400 43px/1 var(--serif);
+      }
+      .commitment-total span {
+        color: var(--blue);
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .decision-note {
+        display: flex;
+        gap: 18px;
+        align-items: baseline;
+        margin: 0;
+        padding: 22px 36px;
+        border: 1px solid var(--rust);
+        border-top: 0;
+        background: #fff7f2;
+        color: #4d443f;
+        font-size: 14px;
+      }
+      .decision-note strong {
+        flex: 0 0 auto;
+        color: var(--rust);
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .milestones-head {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 70px;
+        align-items: end;
+        margin: 78px 0 30px;
+      }
+      .milestones-head h3 {
+        margin: 0;
+        font: 400 46px/0.98 var(--serif);
+      }
+      .milestones-head p {
+        max-width: 570px;
+        margin: 0;
+        color: var(--muted);
+      }
+      .milestones {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+      .milestone {
+        min-height: 230px;
+        padding: 27px 24px 30px 0;
+      }
+      .milestone + .milestone {
+        padding-left: 24px;
+        border-left: 1px solid var(--line);
+      }
+      .milestone small {
+        display: block;
+        margin-bottom: 28px;
+        color: var(--rust);
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .milestone h4 {
+        margin: 0 0 12px;
+        font: 400 27px/1.05 var(--serif);
+      }
+      .milestone p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
       }
       .fit {
         padding: 110px 0;
@@ -1046,7 +1198,8 @@
         .story-feature,
         .story-grid,
         .director-grid,
-        .cta-grid {
+        .cta-grid,
+        .milestones-head {
           grid-template-columns: 1fr;
         }
         .hero-grid {
@@ -1083,6 +1236,52 @@
         }
         .sprint-grid {
           gap: 45px;
+        }
+        .offer-step {
+          grid-template-columns: 55px minmax(0, 1fr);
+          gap: 20px;
+          padding: 28px;
+        }
+        .offer-price {
+          grid-column: 2;
+          padding: 18px 0 0;
+          border-top: 1px solid var(--line);
+          border-left: 0;
+          text-align: left;
+        }
+        .commitment {
+          grid-template-columns: 1fr;
+          gap: 24px;
+          padding: 34px 28px;
+        }
+        .commitment-total {
+          text-align: left;
+        }
+        .decision-note {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 7px;
+          padding: 20px 28px;
+        }
+        .milestones-head {
+          gap: 18px;
+          margin-top: 62px;
+        }
+        .milestones {
+          grid-template-columns: 1fr 1fr;
+        }
+        .milestone {
+          min-height: 215px;
+          padding: 25px 24px;
+        }
+        .milestone + .milestone {
+          padding-left: 24px;
+        }
+        .milestone:nth-child(3) {
+          border-left: 0;
+        }
+        .milestone:nth-child(n + 3) {
+          border-top: 1px solid var(--line);
         }
         .proof-note {
           flex-direction: column;
@@ -1127,12 +1326,51 @@
         .deliverables,
         .credentials,
         .form-grid,
-        .booking-options {
+        .booking-options,
+        .milestones {
           grid-template-columns: 1fr;
         }
         .deliverable:nth-child(even) {
           padding-left: 0;
           border-left: 0;
+        }
+        .offer-stack {
+          margin-top: 46px;
+        }
+        .offer-step {
+          grid-template-columns: 42px 1fr;
+          gap: 16px;
+          padding: 27px 22px;
+        }
+        .offer-number {
+          font-size: 34px;
+        }
+        .offer-price {
+          grid-column: 2;
+          padding: 18px 0 0;
+          border-top: 1px solid var(--line);
+          border-left: 0;
+          text-align: left;
+        }
+        .offer-price strong {
+          font-size: 39px;
+        }
+        .commitment,
+        .decision-note {
+          padding-right: 22px;
+          padding-left: 22px;
+        }
+        .milestones-head h3 {
+          font-size: 41px;
+        }
+        .milestone,
+        .milestone + .milestone {
+          min-height: 0;
+          padding: 26px 0;
+          border-left: 0;
+        }
+        .milestone + .milestone {
+          border-top: 1px solid var(--line);
         }
         .scorecard,
         .process,
@@ -1185,11 +1423,11 @@
           ☰
         </button>
         <nav class="links">
-          <a href="#academy">The idea</a><a href="#fit">Fit</a
+          <a href="#sprint">The Academy</a><a href="#fit">Fit</a
           ><a href="#evidence">The standard</a><a href="#stories">Stories</a
           ><a href="#about">Leadership</a
           ><button class="button review-trigger" type="button">
-            Request a review
+            Start readiness
           </button>
         </nav>
       </div>
@@ -1209,9 +1447,9 @@
             </p>
             <div class="actions">
               <button class="button review-trigger" type="button">
-                Request my complimentary readiness review</button
-              ><a class="button outline" href="#academy"
-                >Discover the academy</a
+                Start my complimentary readiness process</button
+              ><a class="button outline" href="#sprint"
+                >See the 12-week Academy</a
               >
             </div>
           </div>
@@ -1265,47 +1503,151 @@
         </div>
       </section>
       <section id="sprint" class="sprint">
-        <div class="wrap sprint-grid">
-          <div>
-            <div class="label">02 / The experience</div>
-            <h2>The 8-Week Algebra Ready Sprint™</h2>
-            <p class="sprint-intro">
-              A focused small-group academic experience for capable students who
-              need stronger foundations, greater challenge, or both.
-            </p>
-            <p class="sequence">
-              Assess → Prioritize → Teach → Reassess → Recommend
+        <div class="wrap">
+          <div class="sprint-grid">
+            <div>
+              <div class="label">02 / The experience</div>
+              <h2>The 12-Week Algebra Ready Academy</h2>
+              <p class="sprint-intro">
+                A diagnostic-first small-group program that turns hidden gaps
+                into visible progress—in three focused four-week chapters.
+              </p>
+              <p class="sequence">
+                See the gap → Launch the plan → Build the skill → Prove the
+                progress
+              </p>
+            </div>
+            <div
+              class="deliverables"
+              role="list"
+              aria-label="Academy experience"
+            >
+              <div class="deliverable" role="listitem">
+                No more than four students per group
+              </div>
+              <div class="deliverable" role="listitem">
+                Twelve weekly 60-minute sessions
+              </div>
+              <div class="deliverable" role="listitem">
+                Targeted between-session practice
+              </div>
+              <div class="deliverable" role="listitem">
+                Weekly parent progress updates
+              </div>
+            </div>
+          </div>
+          <div class="offer-stack" aria-label="Enrollment and pricing">
+            <article class="offer-step">
+              <div class="offer-number" aria-hidden="true">01</div>
+              <div class="offer-copy">
+                <h3>Complimentary readiness process</h3>
+                <p>
+                  Start with a 20-minute parent call. If the fit is promising,
+                  your child completes a student assessment, followed by a
+                  parent results meeting with a clear recommendation.
+                </p>
+              </div>
+              <div class="offer-price">
+                <strong>$0</strong>
+                <span>Before any enrollment decision</span>
+              </div>
+            </article>
+            <article class="offer-step launch">
+              <div class="offer-number" aria-hidden="true">02</div>
+              <div class="offer-copy">
+                <h3>Readiness &amp; Launch Package</h3>
+                <p>
+                  Paid only after the results meeting, if you choose the
+                  Academy. Includes a personalized 12-week priority map,
+                  placement and scheduling, a baseline parent record, and the
+                  first four-week learning sequence.
+                </p>
+              </div>
+              <div class="offer-price">
+                <strong>$299</strong>
+                <span>One time · separate from tuition</span>
+              </div>
+            </article>
+            <article class="offer-step">
+              <div class="offer-number" aria-hidden="true">03</div>
+              <div class="offer-copy">
+                <h3>Academy tuition</h3>
+                <p>
+                  Each tuition period includes four 60-minute small-group
+                  sessions—one per week—plus targeted practice, weekly parent
+                  updates, progress tracking, and a four-week evidence review.
+                </p>
+              </div>
+              <div class="offer-price">
+                <strong>$399</strong>
+                <span>Every four weeks</span>
+              </div>
+            </article>
+            <div class="commitment">
+              <div>
+                <h3>12-week initial commitment</h3>
+                <p>
+                  The initial term includes three $399 tuition payments: when
+                  the Academy begins, at Week 5, and at Week 9. After Week 12,
+                  we compare the evidence and recommend graduation or continued
+                  Academy support at $399 every four weeks.
+                </p>
+              </div>
+              <div class="commitment-total">
+                <strong>$1,496</strong>
+                <span>Total initial investment</span>
+              </div>
+            </div>
+          </div>
+          <p class="decision-note">
+            <strong>See the evidence before you decide.</strong>
+            <span
+              >No payment is collected before the assessment results meeting.
+              The $299 Launch Package is paid only if you choose to
+              enroll.</span
+            >
+          </p>
+          <div class="milestones-head">
+            <h3>Clear wins. No vague progress.</h3>
+            <p>
+              Every four weeks produces a concrete decision point—so you can see
+              what your child is learning, what holds independently, and what
+              should happen next.
             </p>
           </div>
-          <div
-            class="deliverables"
-            role="list"
-            aria-label="Sprint deliverables"
-          >
-            <div class="deliverable" role="listitem">
-              Comprehensive readiness assessment
-            </div>
-            <div class="deliverable" role="listitem">
-              Personalized learning sequence
-            </div>
-            <div class="deliverable" role="listitem">
-              No more than four students per group
-            </div>
-            <div class="deliverable" role="listitem">
-              Eight weekly 60-minute sessions
-            </div>
-            <div class="deliverable" role="listitem">
-              Targeted between-session practice
-            </div>
-            <div class="deliverable" role="listitem">
-              Weekly parent progress updates
-            </div>
-            <div class="deliverable" role="listitem">
-              Week 4 instructional review
-            </div>
-            <div class="deliverable" role="listitem">
-              Final reassessment + written 90-day plan
-            </div>
+          <div class="milestones" aria-label="12-week Academy milestones">
+            <article class="milestone">
+              <small>Before Week 1 · Clarity</small>
+              <h4>Know the priority.</h4>
+              <p>
+                See the specific gap, what it is blocking, and the first plan
+                for addressing it.
+              </p>
+            </article>
+            <article class="milestone">
+              <small>Week 4 · First evidence</small>
+              <h4>See what is changing.</h4>
+              <p>
+                Review what was taught, what your child can demonstrate
+                independently, and the next target.
+              </p>
+            </article>
+            <article class="milestone">
+              <small>Week 8 · Transfer check</small>
+              <h4>Test whether it holds.</h4>
+              <p>
+                See whether the skill transfers to less familiar problems—and
+                how the plan adjusts when it does not.
+              </p>
+            </article>
+            <article class="milestone">
+              <small>Week 12 · Proof + next plan</small>
+              <h4>Compare. Decide. Move forward.</h4>
+              <p>
+                Compare reassessment evidence with the baseline and receive a
+                clear graduation or continuation recommendation.
+              </p>
+            </article>
           </div>
         </div>
       </section>
@@ -1318,7 +1660,7 @@
             </div>
             <p>
               Selectivity protects the quality of the group. The readiness
-              review is used to determine whether the Sprint matches the
+              process is used to determine whether the Academy matches the
               student’s needs, goals, and working habits.
             </p>
           </div>
@@ -1426,23 +1768,23 @@
               <h3>One coherent path.</h3>
               <div class="step">
                 <b>01</b>
-                <div>Readiness review</div>
+                <div>20-minute parent call</div>
               </div>
               <div class="step">
                 <b>02</b>
-                <div>Personalized sequence</div>
+                <div>Student assessment</div>
               </div>
               <div class="step">
                 <b>03</b>
-                <div>Deliberate practice</div>
+                <div>Results + recommendation</div>
               </div>
               <div class="step">
                 <b>04</b>
-                <div>Independent reassessment</div>
+                <div>12-week Academy</div>
               </div>
               <div class="step">
                 <b>05</b>
-                <div>90-day roadmap</div>
+                <div>Reassess + recommend</div>
               </div>
             </div>
           </div>
@@ -1488,20 +1830,21 @@
               <div class="evidence-item">
                 <b>02</b>
                 <div>
-                  <h4>Weekly evidence</h4>
+                  <h4>Weekly + four-week evidence</h4>
                   <p>
                     A concise parent update documenting what was taught, what
-                    the student demonstrated, and what comes next.
+                    the student demonstrated, and what comes next—plus a formal
+                    evidence review every four weeks.
                   </p>
                 </div>
               </div>
               <div class="evidence-item">
                 <b>03</b>
                 <div>
-                  <h4>Final record</h4>
+                  <h4>12-week final record</h4>
                   <p>
                     A reassessment, a comparison of the evidence, and a written
-                    90-day recommendation.
+                    graduation or continuation recommendation.
                   </p>
                 </div>
               </div>
@@ -1609,8 +1952,7 @@
               <div class="story-detail">
                 <strong>Parent-reported context</strong>
                 Her parent later reported strong performance on MAP and a
-                practice college-readiness assessment. No tutoring-caused score
-                gain is claimed.
+                practice college-readiness assessment.
               </div>
               <blockquote>
                 “It’s worth it. Do it. I’d do it ten times over.”
@@ -1696,7 +2038,7 @@
               Matthew McSpadden<span>Founder &amp; academic director</span>
             </div>
             <button class="button outline review-trigger" type="button">
-              Begin the conversation
+              Start the readiness process
             </button>
           </div>
         </div>
@@ -1704,11 +2046,15 @@
       <section class="cta">
         <div class="wrap cta-grid">
           <div>
-            <h2>Potential deserves a plan.</h2>
-            <p>Begin with a substantive review of readiness and fit.</p>
+            <h2>Start with clarity.</h2>
+            <p>
+              First, a 20-minute parent call. If the fit is promising, your child
+              completes a complimentary assessment and you receive a clear
+              recommendation before deciding whether to enroll.
+            </p>
           </div>
           <button class="button review-trigger" type="button">
-            Request my complimentary readiness review
+            Start my complimentary readiness process
           </button>
         </div>
       </section>
@@ -1741,13 +2087,15 @@
           <input
             type="hidden"
             name="_subject"
-            value="New complimentary readiness review request"
+            value="New complimentary readiness process request"
           /><input type="hidden" name="_captcha" value="false" />
           <div class="application-step">
-            <div class="label">Complimentary review · Step 1 of 2</div>
+            <div class="label">Readiness process · Step 1 of 2</div>
             <h2>Tell us about your student.</h2>
             <p class="modal-copy">
-              Five details help us make the readiness call focused and useful.
+              Start with a 20-minute parent call. If the fit is promising, we
+              schedule the complimentary student assessment and parent results
+              meeting.
             </p>
             <div class="form-grid">
               <div class="field">
@@ -1807,15 +2155,15 @@
               type="button"
               id="continue-booking"
             >
-              Continue to choose a time
+              Continue to choose a call time
             </button>
           </div>
           <div class="booking-step" hidden>
             <button class="back-button" type="button" id="back-application">
               ← Back to student details
             </button>
-            <div class="label">Complimentary review · Step 2 of 2</div>
-            <h2>Choose your readiness-call time.</h2>
+            <div class="label">Readiness process · Step 2 of 2</div>
+            <h2>Choose your 20-minute parent-call time.</h2>
             <p class="modal-copy">
               Select the 20-minute window that works best. We will confirm it by
               phone.
@@ -1849,11 +2197,11 @@
               >
             </div>
             <button class="button" type="submit">
-              Reserve my readiness call
+              Request my readiness call
             </button>
             <p class="form-note">
-              Your information is used only to coordinate your review. No
-              obligation, no mailing list.
+              Your information is used only to coordinate the readiness
+              process. No obligation, no mailing list.
             </p>
           </div>
         </form>
