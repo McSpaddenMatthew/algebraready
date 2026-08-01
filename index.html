@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Algebra Ready is a 12-week semi-private mathematics academy for capable students in grades 4–6 in the Charleston area. Four students maximum, individually matched tasks, and visible evidence every four weeks."
+      content="A selective 12-week mathematics academy for capable students in grades 4–6 in the Charleston area."
     />
     <meta name="robots" content="index,follow" />
-    <meta name="theme-color" content="#101d2a" />
+    <meta name="theme-color" content="#0b1d2c" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Algebra Ready" />
     <meta
@@ -17,1964 +17,493 @@
     />
     <meta
       property="og:description"
-      content="A 12-week semi-private mathematics academy for capable students in grades 4–6. Four students maximum, individually matched tasks, and visible evidence every four weeks."
+      content="A selective 12-week mathematics academy for capable students in grades 4–6 in the Charleston area."
     />
     <meta name="twitter:card" content="summary" />
     <title>Algebra Ready — An A Is the Starting Point</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --night: #101d2a;
-        --cream: #f3efe6;
-        --paper: #fbf9f4;
-        --rust: #c75332;
-        --blue: #b7d4dc;
-        --muted: #63707b;
-        --line: #d9d5cb;
-        --serif: "Instrument Serif", Georgia, serif;
-        --sans: "DM Sans", Arial, sans-serif;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        margin: 0;
-        background: var(--paper);
-        color: var(--night);
-        font: 400 16px/1.55 var(--sans);
-        -webkit-font-smoothing: antialiased;
-      }
-      a {
-        color: inherit;
-      }
-      .wrap {
-        width: min(1240px, calc(100% - 64px));
-        margin: auto;
-      }
-      .topline {
-        height: 8px;
-        background: var(--rust);
-      }
-      .skip-link {
-        position: fixed;
-        left: 16px;
-        top: -80px;
-        z-index: 100;
-        background: var(--night);
-        color: #fff;
-        padding: 12px 18px;
-      }
-      .skip-link:focus {
-        top: 16px;
-      }
-      button,
-      input,
-      select,
-      textarea {
-        font: inherit;
-      }
-      :focus-visible {
-        outline: 3px solid var(--blue);
-        outline-offset: 3px;
-      }
-      .header {
-        height: 92px;
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid var(--line);
-        background: rgba(251, 249, 244, 0.94);
-        position: sticky;
-        top: 0;
-        z-index: 20;
-        backdrop-filter: blur(12px);
-      }
-      .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .brand {
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        gap: 13px;
-        font-size: 14px;
-        font-weight: 600;
-        letter-spacing: 0.17em;
-      }
-      .brand-mark {
-        width: 34px;
-        height: 34px;
-        border-radius: 50%;
-        background: var(--night);
-        color: #fff;
-        display: grid;
-        place-items: center;
-        font: 400 16px var(--serif);
-        letter-spacing: 0;
-      }
-      .links {
-        display: flex;
-        align-items: center;
-        gap: 34px;
-      }
-      .links > a:not(.button) {
-        font-size: 11px;
-        font-weight: 600;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-      }
-      .button {
-        display: inline-flex;
-        min-height: 50px;
-        padding: 0 23px;
-        align-items: center;
-        justify-content: center;
-        background: var(--rust);
-        color: #fff;
-        text-decoration: none;
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        border: 1px solid var(--rust);
-        transition: 0.2s;
-      }
-      .button:hover {
-        background: #a73d23;
-        border-color: #a73d23;
-      }
-      .button.outline {
-        background: transparent;
-        color: var(--night);
-        border-color: var(--night);
-      }
-      .button.outline:hover {
-        background: var(--night);
-        color: #fff;
-      }
-      .menu {
-        display: none;
-        border: 0;
-        background: none;
-        font-size: 25px;
-      }
-      .hero {
-        min-height: 730px;
-        padding: 74px 0 58px;
-        overflow: hidden;
-      }
-      .hero-grid {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 72px;
-        align-items: center;
-      }
-      .label {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        color: var(--rust);
-        font-size: 10px;
-        font-weight: 600;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-      }
-      .label:before {
-        content: "";
-        width: 35px;
-        border-top: 1px solid currentColor;
-      }
-      .hero h1 {
-        font: 400 clamp(65px, 7.5vw, 108px) / 0.84 var(--serif);
-        letter-spacing: -0.045em;
-        margin: 30px 0 18px;
-        max-width: 850px;
-      }
-      .hero h1 em {
-        font-weight: 400;
-        color: var(--rust);
-      }
-      .hero-promise {
-        font: 400 clamp(29px, 3vw, 42px) / 1 var(--serif);
-        margin: 0 0 22px;
-      }
-      .hero-copy {
-        max-width: 590px;
-        font-size: 19px;
-        color: #45535e;
-        margin: 0 0 34px;
-      }
-      .actions {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-      }
-      .founding-note {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        max-width: 650px;
-        margin-top: 24px;
-        color: #45535e;
-        font-size: 12px;
-      }
-      .founding-note:before {
-        content: "";
-        width: 9px;
-        height: 9px;
-        flex: 0 0 9px;
-        border-radius: 50%;
-        background: var(--rust);
-        box-shadow: 0 0 0 5px rgba(199, 83, 50, 0.12);
-      }
-      .hero-art {
-        height: 500px;
-        background: var(--blue);
-        position: relative;
-        isolation: isolate;
-      }
-      .hero-art:before {
-        content: "";
-        position: absolute;
-        inset: 28px;
-        border: 1px solid rgba(16, 29, 42, 0.25);
-      }
-      .formula {
-        position: absolute;
-        inset: 0;
-        display: grid;
-        place-items: center;
-        font: 400 clamp(100px, 13vw, 176px) / 1 var(--serif);
-        letter-spacing: -0.08em;
-        transform: rotate(-7deg);
-      }
-      .formula sup {
-        color: var(--rust);
-        font-size: 0.45em;
-      }
-      .art-tag {
-        position: absolute;
-        left: -35px;
-        bottom: 44px;
-        width: 215px;
-        background: var(--night);
-        color: #fff;
-        padding: 23px 25px;
-      }
-      .art-tag small {
-        display: block;
-        color: #aebbc4;
-        font-size: 9px;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        margin-bottom: 8px;
-      }
-      .art-tag b {
-        font: 400 24px/1.05 var(--serif);
-      }
-      .side-word {
-        position: absolute;
-        right: -57px;
-        top: 102px;
-        transform: rotate(90deg);
-        font-size: 9px;
-        letter-spacing: 0.23em;
-        text-transform: uppercase;
-      }
-      .belief {
-        padding: 115px 0;
-        background: var(--night);
-        color: #fff;
-      }
-      .belief-grid {
-        display: grid;
-        grid-template-columns: 0.35fr 1.65fr;
-        gap: 70px;
-      }
-      .chapter {
-        font-size: 10px;
-        color: #9aa7b0;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-      }
-      .belief h2 {
-        font: 400 clamp(52px, 6.6vw, 88px) / 0.95 var(--serif);
-        letter-spacing: -0.025em;
-        margin: 0;
-        max-width: 930px;
-      }
-      .belief h2 em {
-        color: var(--blue);
-        font-weight: 400;
-      }
-      .principles {
-        grid-column: 2;
-        margin-top: 72px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        border-top: 1px solid #3e4952;
-      }
-      .principle {
-        padding: 30px 32px 0 0;
-      }
-      .principle + .principle {
-        border-left: 1px solid #3e4952;
-        padding-left: 32px;
-      }
-      .principle span {
-        color: var(--rust);
-        font: 400 32px var(--serif);
-      }
-      .principle h3 {
-        font-size: 11px;
-        letter-spacing: 0.13em;
-        text-transform: uppercase;
-        margin: 22px 0 10px;
-      }
-      .principle p {
-        font-size: 14px;
-        color: #abb5bc;
-        margin: 0;
-      }
-      .sprint {
-        padding: 105px 0;
-        background: var(--paper);
-      }
-      .sprint-grid {
-        display: grid;
-        grid-template-columns: 0.85fr 1.15fr;
-        gap: 90px;
-        align-items: end;
-      }
-      .sprint h2 {
-        font: 400 clamp(53px, 6vw, 78px) / 0.92 var(--serif);
-        letter-spacing: -0.03em;
-        margin: 18px 0 24px;
-      }
-      .sprint-intro {
-        font-size: 18px;
-        color: var(--muted);
-        max-width: 520px;
-      }
-      .sequence {
-        margin-top: 35px;
-        color: var(--rust);
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-      .deliverables {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        border-top: 1px solid var(--line);
-        align-self: end;
-      }
-      .deliverable {
-        padding: 24px 12px 24px 0;
-        border-bottom: 1px solid var(--line);
-        font-size: 13px;
-        font-weight: 600;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-      }
-      .deliverable:nth-child(even) {
-        padding-left: 28px;
-        border-left: 1px solid var(--line);
-      }
-      .semi-private {
-        display: grid;
-        grid-template-columns: 0.7fr 1.3fr;
-        gap: 64px;
-        margin-top: 64px;
-        padding: 44px;
-        border: 1px solid var(--line);
-        background: var(--cream);
-      }
-      .semi-private h3 {
-        margin: 12px 0 15px;
-        font: 400 42px/0.95 var(--serif);
-      }
-      .semi-private > div:first-child > p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 14px;
-      }
-      .mechanism-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        border-top: 1px solid var(--line);
-        border-left: 1px solid var(--line);
-      }
-      .mechanism-card {
-        min-height: 150px;
-        padding: 22px;
-        border-right: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
-        background: var(--paper);
-      }
-      .mechanism-card span {
-        display: block;
-        margin-bottom: 9px;
-        color: var(--rust);
-        font-size: 9px;
-        font-weight: 600;
-        letter-spacing: 0.13em;
-        text-transform: uppercase;
-      }
-      .mechanism-card h4 {
-        margin: 0 0 8px;
-        font: 400 24px/1 var(--serif);
-      }
-      .mechanism-card p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 12px;
-      }
-      .offer-stack {
-        margin-top: 64px;
-        border: 1px solid var(--line);
-        background: #fff;
-        box-shadow: 0 24px 70px rgba(16, 29, 42, 0.08);
-      }
-      .offer-step {
-        display: grid;
-        grid-template-columns: 70px minmax(0, 1fr) 240px;
-        gap: 28px;
-        align-items: center;
-        padding: 32px 36px;
-      }
-      .offer-step + .offer-step {
-        border-top: 1px solid var(--line);
-      }
-      .offer-step.launch {
-        background: #f5ebe4;
-      }
-      .offer-number {
-        color: var(--rust);
-        font: 400 40px/1 var(--serif);
-      }
-      .offer-copy h3 {
-        margin: 0 0 7px;
-        font: 400 29px/1.05 var(--serif);
-      }
-      .offer-copy p {
-        max-width: 690px;
-        margin: 0;
-        color: #4d5b66;
-        font-size: 14px;
-      }
-      .offer-detail {
-        padding-left: 30px;
-        border-left: 1px solid var(--line);
-        text-align: right;
-      }
-      .offer-detail strong {
-        display: block;
-        font: 400 27px/1.05 var(--serif);
-      }
-      .offer-detail span {
-        display: block;
-        margin-top: 9px;
-        color: var(--muted);
-        font-size: 10px;
-        font-weight: 600;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-      }
-      .commitment {
-        display: grid;
-        grid-template-columns: minmax(0, 1.35fr) minmax(250px, 0.65fr);
-        gap: 48px;
-        align-items: center;
-        padding: 38px 36px;
-        background: var(--night);
-        color: #fff;
-      }
-      .commitment h3 {
-        margin: 0 0 9px;
-        font: 400 31px/1 var(--serif);
-      }
-      .commitment p {
-        margin: 0;
-        color: #b9c2c9;
-        font-size: 14px;
-      }
-      .commitment-summary {
-        text-align: right;
-      }
-      .commitment-summary strong {
-        display: block;
-        color: #fff;
-        font: 400 34px/1 var(--serif);
-      }
-      .commitment-summary span {
-        color: var(--blue);
-        font-size: 10px;
-        font-weight: 600;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-      }
-      .decision-note {
-        display: flex;
-        gap: 18px;
-        align-items: baseline;
-        margin: 0;
-        padding: 22px 36px;
-        border: 1px solid var(--rust);
-        border-top: 0;
-        background: #fff7f2;
-        color: #4d443f;
-        font-size: 14px;
-      }
-      .decision-note strong {
-        flex: 0 0 auto;
-        color: var(--rust);
-        font-size: 11px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-      }
-      .founding-capacity-note {
-        display: grid;
-        grid-template-columns: auto 1fr auto;
-        gap: 22px;
-        align-items: center;
-        margin: 18px 0 0;
-        padding: 22px 26px;
-        border: 1px solid var(--line);
-        background: var(--cream);
-      }
-      .founding-capacity-note b {
-        color: var(--rust);
-        font-size: 10px;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-      .founding-capacity-note p {
-        margin: 0;
-        color: #4d5b66;
-        font-size: 13px;
-      }
-      .founding-capacity-note strong {
-        white-space: nowrap;
-        font: 400 25px var(--serif);
-      }
-      .milestones-head {
-        display: grid;
-        grid-template-columns: 0.8fr 1.2fr;
-        gap: 70px;
-        align-items: end;
-        margin: 78px 0 30px;
-      }
-      .milestones-head h3 {
-        margin: 0;
-        font: 400 46px/0.98 var(--serif);
-      }
-      .milestones-head p {
-        max-width: 570px;
-        margin: 0;
-        color: var(--muted);
-      }
-      .milestones {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        border-top: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
-      }
-      .milestone {
-        min-height: 230px;
-        padding: 27px 24px 30px 0;
-      }
-      .milestone + .milestone {
-        padding-left: 24px;
-        border-left: 1px solid var(--line);
-      }
-      .milestone small {
-        display: block;
-        margin-bottom: 28px;
-        color: var(--rust);
-        font-size: 10px;
-        font-weight: 600;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-      .milestone h4 {
-        margin: 0 0 12px;
-        font: 400 27px/1.05 var(--serif);
-      }
-      .milestone p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 13px;
-      }
-      .fit {
-        padding: 110px 0;
-        background: var(--blue);
-      }
-      .fit-head {
-        display: grid;
-        grid-template-columns: 1fr 0.7fr;
-        gap: 70px;
-        align-items: end;
-        margin-bottom: 52px;
-      }
-      .fit h2 {
-        font: 400 clamp(53px, 6vw, 78px) / 0.92 var(--serif);
-        letter-spacing: -0.03em;
-        margin: 18px 0 0;
-      }
-      .fit-head > p {
-        max-width: 480px;
-        margin: 0;
-        color: #3f515d;
-      }
-      .fit-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-      }
-      .fit-card {
-        padding: 44px;
-        border: 1px solid rgba(16, 29, 42, 0.22);
-        background: var(--paper);
-      }
-      .fit-card.not-fit {
-        background: var(--night);
-        color: #fff;
-      }
-      .fit-card h3 {
-        margin: 0 0 25px;
-        font: 400 34px/1 var(--serif);
-      }
-      .fit-card ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-      .fit-card li {
-        position: relative;
-        padding: 16px 0 16px 28px;
-        border-top: 1px solid var(--line);
-        color: #45535e;
-      }
-      .fit-card li:before {
-        content: "→";
-        position: absolute;
-        left: 0;
-        color: var(--rust);
-      }
-      .fit-card.not-fit li {
-        border-color: #3e4952;
-        color: #b7c1c8;
-      }
-      .evidence {
-        padding: 120px 0;
-        background: var(--cream);
-      }
-      .evidence-head {
-        display: grid;
-        grid-template-columns: 1fr 0.6fr;
-        gap: 70px;
-        align-items: end;
-        margin-bottom: 65px;
-      }
-      .evidence h2,
-      .director h2 {
-        font: 400 clamp(56px, 6vw, 82px) / 0.9 var(--serif);
-        letter-spacing: -0.03em;
-        margin: 17px 0 0;
-      }
-      .evidence-head p {
-        color: var(--muted);
-        margin: 0;
-      }
-      .illustrative-note {
-        margin: -34px 0 28px;
-        padding-left: 15px;
-        border-left: 2px solid var(--rust);
-        color: var(--muted);
-        font-size: 12px;
-      }
-      .proof-board {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        background: var(--paper);
-        border: 1px solid var(--line);
-      }
-      .scorecard {
-        padding: 52px;
-      }
-      .scorecard-head {
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid var(--line);
-        padding-bottom: 24px;
-        margin-bottom: 30px;
-        font-size: 9px;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        color: var(--muted);
-      }
-      .measure {
-        display: grid;
-        grid-template-columns: 120px 1fr 42px;
-        gap: 18px;
-        align-items: center;
-        margin: 25px 0;
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-      }
-      .track {
-        height: 7px;
-        background: #e1ddd5;
-      }
-      .fill {
-        height: 100%;
-        background: var(--rust);
-      }
-      .measure b {
-        font: 400 25px var(--serif);
-        text-align: right;
-      }
-      .process {
-        background: var(--blue);
-        padding: 52px;
-      }
-      .process h3 {
-        font: 400 37px/1 var(--serif);
-        margin: 0 0 32px;
-      }
-      .step {
-        display: grid;
-        grid-template-columns: 46px 1fr;
-        gap: 15px;
-        padding: 19px 0;
-        border-top: 1px solid rgba(16, 29, 42, 0.2);
-      }
-      .step b {
-        font: 400 20px var(--serif);
-        color: var(--rust);
-      }
-      .step div {
-        font-size: 12px;
-        font-weight: 600;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-      }
-      .proof-note {
-        display: flex;
-        justify-content: space-between;
-        gap: 25px;
-        margin-top: 30px;
-        color: var(--muted);
-        font-size: 12px;
-      }
-      .proof-note strong {
-        color: var(--night);
-        font-weight: 600;
-      }
-      .real-proof {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-        margin-top: 24px;
-      }
-      .work-sample,
-      .observations {
-        background: var(--paper);
-        border: 1px solid var(--line);
-        padding: 42px;
-      }
-      .proof-kicker {
-        color: var(--rust);
-        font-size: 9px;
-        font-weight: 600;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-      }
-      .work-sample h3,
-      .observations h3 {
-        font: 400 35px/1 var(--serif);
-        margin: 13px 0 28px;
-      }
-      .sample-row {
-        display: grid;
-        grid-template-columns: 76px 1fr;
-        gap: 22px;
-        padding: 20px 0;
-        border-top: 1px solid var(--line);
-      }
-      .sample-row span {
-        font-size: 9px;
-        font-weight: 600;
-        letter-spacing: 0.13em;
-        text-transform: uppercase;
-        color: var(--muted);
-      }
-      .sample-row p {
-        margin: 0;
-        font: 400 20px/1.25 var(--serif);
-      }
-      .observation {
-        margin: 0;
-        padding: 0 0 28px;
-        font: 400 23px/1.25 var(--serif);
-      }
-      .observation + .observation {
-        padding: 28px 0 0;
-        border-top: 1px solid var(--line);
-      }
-      .observation cite {
-        display: block;
-        margin-top: 14px;
-        color: var(--muted);
-        font: 600 9px var(--sans);
-        font-style: normal;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-      .evidence-item {
-        display: grid;
-        grid-template-columns: 42px 1fr;
-        gap: 18px;
-        padding: 21px 0;
-        border-top: 1px solid var(--line);
-      }
-      .evidence-item b {
-        color: var(--rust);
-        font: 400 23px var(--serif);
-      }
-      .evidence-item h4 {
-        margin: 1px 0 5px;
-        font-size: 11px;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-      .evidence-item p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 13px;
-      }
-      .disclaimer {
-        max-width: 820px;
-        margin: 30px auto 0;
-        color: var(--muted);
-        font-size: 11px;
-        text-align: center;
-      }
-      .stories {
-        padding: 120px 0;
-        background: var(--night);
-        color: #fff;
-      }
-      .stories-head {
-        display: grid;
-        grid-template-columns: 1fr 0.55fr;
-        gap: 80px;
-        align-items: end;
-      }
-      .stories h2 {
-        max-width: 850px;
-        margin: 17px 0 0;
-        font: 400 clamp(54px, 6vw, 82px) / 0.9 var(--serif);
-        letter-spacing: -0.03em;
-      }
-      .stories-head > p {
-        margin: 0;
-        color: #aeb9c0;
-      }
-      .story-feature {
-        display: grid;
-        grid-template-columns: 78px 1.15fr 0.85fr;
-        margin-top: 58px;
-        border-top: 5px solid var(--rust);
-        background: var(--paper);
-        color: var(--night);
-      }
-      .story-index {
-        padding: 48px 24px;
-        border-right: 1px solid var(--line);
-        color: var(--rust);
-        font: 400 28px var(--serif);
-        text-align: center;
-      }
-      .story-copy {
-        padding: 48px;
-      }
-      .story-copy h3 {
-        max-width: 570px;
-        margin: 14px 0 19px;
-        font: 400 46px/0.95 var(--serif);
-      }
-      .story-copy > p {
-        max-width: 650px;
-        margin: 0;
-        color: var(--muted);
-      }
-      .case-arc {
-        margin-top: 31px;
-        border-top: 1px solid var(--line);
-      }
-      .case-step {
-        display: grid;
-        grid-template-columns: 108px 1fr;
-        gap: 20px;
-        padding: 18px 0;
-        border-bottom: 1px solid var(--line);
-      }
-      .case-step span {
-        color: var(--rust);
-        font-size: 9px;
-        font-weight: 600;
-        letter-spacing: 0.13em;
-        text-transform: uppercase;
-      }
-      .case-step p {
-        margin: 0;
-        font-size: 13px;
-      }
-      .story-quote {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 0;
-        padding: 48px;
-        background: var(--blue);
-        color: var(--night);
-        font: 400 34px/1.05 var(--serif);
-      }
-      .story-quote:before {
-        content: "“";
-        color: var(--rust);
-        font: 400 70px/0.5 var(--serif);
-      }
-      .story-quote cite,
-      .story-card cite {
-        display: block;
-        margin-top: 28px;
-        font: 600 9px var(--sans);
-        font-style: normal;
-        letter-spacing: 0.13em;
-        text-transform: uppercase;
-      }
-      .story-quote cite {
-        color: #425661;
-      }
-      .story-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 18px;
-        margin-top: 18px;
-      }
-      .story-card {
-        display: flex;
-        min-height: 500px;
-        flex-direction: column;
-        padding: 38px;
-        border: 1px solid #3e4952;
-        background: #152635;
-      }
-      .story-card h3 {
-        margin: 14px 0 18px;
-        font: 400 35px/1 var(--serif);
-      }
-      .story-card > p {
-        margin: 0;
-        color: #b5c0c7;
-        font-size: 14px;
-      }
-      .story-detail {
-        margin: 23px 0 0;
-        padding: 17px 0;
-        border-top: 1px solid #3e4952;
-        border-bottom: 1px solid #3e4952;
-        color: #d8e0e4;
-        font-size: 12px;
-      }
-      .story-detail strong {
-        display: block;
-        margin-bottom: 5px;
-        color: var(--rust);
-        font-size: 9px;
-        letter-spacing: 0.13em;
-        text-transform: uppercase;
-      }
-      .story-card blockquote {
-        margin: auto 0 0;
-        padding-top: 28px;
-        color: #fff;
-        font: 400 24px/1.2 var(--serif);
-      }
-      .story-card cite {
-        color: #91a0aa;
-      }
-      .stories-note {
-        max-width: 900px;
-        margin: 28px auto 0;
-        color: #8f9ca5;
-        font-size: 11px;
-        text-align: center;
-      }
-      .proof-standard-grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        margin-top: 58px;
-        border-top: 1px solid #3e4952;
-        border-bottom: 1px solid #3e4952;
-      }
-      .proof-requirement {
-        min-height: 250px;
-        padding: 29px 22px 31px 0;
-      }
-      .proof-requirement + .proof-requirement {
-        padding-left: 22px;
-        border-left: 1px solid #3e4952;
-      }
-      .proof-requirement small {
-        display: block;
-        margin-bottom: 32px;
-        color: var(--rust);
-        font-size: 10px;
-        font-weight: 600;
-        letter-spacing: 0.13em;
-        text-transform: uppercase;
-      }
-      .proof-requirement h3 {
-        margin: 0 0 12px;
-        font: 400 27px/1 var(--serif);
-      }
-      .proof-requirement p {
-        margin: 0;
-        color: #aeb9c0;
-        font-size: 13px;
-      }
-      .proof-approval {
-        display: flex;
-        justify-content: space-between;
-        gap: 36px;
-        align-items: center;
-        margin-top: 28px;
-        padding: 28px 32px;
-        border-left: 5px solid var(--rust);
-        background: #152635;
-      }
-      .proof-approval strong {
-        flex: 0 0 190px;
-        color: var(--blue);
-        font: 400 27px/1 var(--serif);
-      }
-      .proof-approval p {
-        margin: 0;
-        color: #c4cdd2;
-        font-size: 13px;
-      }
-      .director {
-        padding: 120px 0;
-      }
-      .director-grid {
-        display: grid;
-        grid-template-columns: 0.78fr 1.22fr;
-        gap: 90px;
-        align-items: center;
-      }
-      .portrait-wrap {
-        position: relative;
-      }
-      .portrait {
-        display: block;
-        width: 100%;
-        height: 530px;
-        object-fit: cover;
-        object-position: center 35%;
-        filter: saturate(0.7);
-      }
-      .portrait-wrap:after {
-        content: "ACADEMIC DIRECTION";
-        position: absolute;
-        right: -53px;
-        bottom: 53px;
-        transform: rotate(-90deg);
-        font-size: 9px;
-        letter-spacing: 0.2em;
-      }
-      .director-copy > p {
-        max-width: 640px;
-        color: var(--muted);
-        font-size: 17px;
-      }
-      .credentials {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin-top: 30px;
-        border-top: 1px solid var(--line);
-        border-left: 1px solid var(--line);
-      }
-      .credential {
-        min-height: 112px;
-        padding: 20px;
-        border-right: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
-      }
-      .credential span {
-        display: block;
-        margin-bottom: 8px;
-        color: var(--rust);
-        font-size: 9px;
-        font-weight: 600;
-        letter-spacing: 0.13em;
-        text-transform: uppercase;
-      }
-      .credential strong {
-        display: block;
-        font: 400 20px/1.15 var(--serif);
-      }
-      .signature {
-        margin: 32px 0 38px;
-        font: 400 26px var(--serif);
-      }
-      .signature span {
-        display: block;
-        color: var(--rust);
-        font: 600 9px var(--sans);
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-      }
-      .cta {
-        padding: 95px 0;
-        background: var(--night);
-        color: #fff;
-      }
-      .cta-grid {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 50px;
-        align-items: center;
-      }
-      .cta h2 {
-        font: 400 clamp(52px, 6vw, 80px) / 0.9 var(--serif);
-        margin: 0 0 16px;
-      }
-      .cta p {
-        margin: 0;
-        color: #b7c1c8;
-      }
-      .footer {
-        padding: 42px 0;
-        background: #0a151f;
-        color: #fff;
-      }
-      .footer-grid {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .footer p {
-        margin: 0;
-        text-align: right;
-        color: #8e9aa3;
-        font-size: 9px;
-        line-height: 1.8;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-      }
-      .modal {
-        width: min(720px, calc(100% - 32px));
-        max-height: 90vh;
-        padding: 0;
-        border: 0;
-        background: var(--paper);
-        color: var(--night);
-        box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
-      }
-      .modal::backdrop {
-        background: rgba(10, 21, 31, 0.78);
-        backdrop-filter: blur(4px);
-      }
-      .modal-inner {
-        padding: 48px;
-      }
-      .modal-close {
-        position: absolute;
-        right: 20px;
-        top: 18px;
-        border: 0;
-        background: none;
-        color: var(--night);
-        font-size: 29px;
-        cursor: pointer;
-      }
-      .modal h2 {
-        font: 400 46px/0.95 var(--serif);
-        margin: 12px 0;
-      }
-      .modal-copy {
-        color: var(--muted);
-        margin: 0 0 27px;
-      }
-      .form-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 17px;
-      }
-      .field {
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-      }
-      .field.wide {
-        grid-column: 1/-1;
-      }
-      .field label,
-      .booking-label {
-        font-size: 9px;
-        font-weight: 600;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-      .field input,
-      .field select,
-      .field textarea {
-        width: 100%;
-        border: 1px solid var(--line);
-        border-radius: 0;
-        background: #fff;
-        color: var(--night);
-        font: 400 15px var(--sans);
-        padding: 13px;
-      }
-      .field textarea {
-        min-height: 85px;
-        resize: vertical;
-      }
-      .commit-check {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 11px;
-        align-items: start;
-        padding: 14px;
-        border: 1px solid var(--line);
-        background: #fff;
-        color: #45535e;
-        font-size: 12px;
-      }
-      .commit-check input {
-        width: 17px;
-        height: 17px;
-        margin: 1px 0 0;
-        accent-color: var(--rust);
-      }
-      .form-action {
-        margin-top: 24px;
-      }
-      .booking-step[hidden],
-      .application-step[hidden] {
-        display: none;
-      }
-      .booking-options {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        margin: 20px 0;
-      }
-      .time-option input {
-        position: absolute;
-        opacity: 0;
-      }
-      .time-option span {
-        display: block;
-        padding: 15px;
-        border: 1px solid var(--line);
-        background: #fff;
-        font-size: 12px;
-        text-align: center;
-        cursor: pointer;
-      }
-      .time-option input:checked + span {
-        border-color: var(--rust);
-        box-shadow: inset 0 0 0 1px var(--rust);
-        color: var(--rust);
-      }
-      .form-note {
-        font-size: 11px;
-        color: var(--muted);
-        margin: 15px 0 0;
-      }
-      .back-button {
-        border: 0;
-        background: none;
-        padding: 0;
-        margin-bottom: 20px;
-        color: var(--muted);
-        font: 600 10px var(--sans);
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        cursor: pointer;
-      }
-      @media (max-width: 850px) {
-        .wrap {
-          width: min(100% - 36px, 1240px);
-        }
-        .header {
-          height: 76px;
-        }
-        .links {
-          display: none;
-          position: absolute;
-          top: 76px;
-          left: 0;
-          right: 0;
-          background: var(--paper);
-          padding: 25px;
-          flex-direction: column;
-          border-bottom: 1px solid var(--line);
-        }
-        .links.open {
-          display: flex;
-        }
-        .menu {
-          display: block;
-        }
-        .hero {
-          padding-top: 52px;
-        }
-        .hero-grid,
-        .belief-grid,
-        .sprint-grid,
-        .fit-head,
-        .fit-grid,
-        .evidence-head,
-        .proof-board,
-        .real-proof,
-        .stories-head,
-        .story-feature,
-        .story-grid,
-        .semi-private,
-        .director-grid,
-        .cta-grid,
-        .milestones-head {
-          grid-template-columns: 1fr;
-        }
-        .hero-grid {
-          gap: 55px;
-        }
-        .hero h1 {
-          font-size: 65px;
-        }
-        .hero-art {
-          height: 390px;
-          margin-left: 20px;
-        }
-        .art-tag {
-          left: -20px;
-        }
-        .principles {
-          grid-column: 1;
-          grid-template-columns: 1fr;
-          margin-top: 35px;
-        }
-        .principle,
-        .principle + .principle {
-          padding: 25px 0;
-          border-left: 0;
-          border-top: 1px solid #3e4952;
-        }
-        .sprint,
-        .fit,
-        .evidence,
-        .belief,
-        .stories,
-        .director {
-          padding: 80px 0;
-        }
-        .sprint-grid {
-          gap: 45px;
-        }
-        .semi-private {
-          gap: 32px;
-          padding: 34px;
-        }
-        .offer-step {
-          grid-template-columns: 55px minmax(0, 1fr);
-          gap: 20px;
-          padding: 28px;
-        }
-        .offer-detail {
-          grid-column: 2;
-          padding: 18px 0 0;
-          border-top: 1px solid var(--line);
-          border-left: 0;
-          text-align: left;
-        }
-        .commitment {
-          grid-template-columns: 1fr;
-          gap: 24px;
-          padding: 34px 28px;
-        }
-        .commitment-summary {
-          text-align: left;
-        }
-        .decision-note {
-          align-items: flex-start;
-          flex-direction: column;
-          gap: 7px;
-          padding: 20px 28px;
-        }
-        .founding-capacity-note {
-          grid-template-columns: 1fr;
-          gap: 8px;
-        }
-        .milestones-head {
-          gap: 18px;
-          margin-top: 62px;
-        }
-        .milestones {
-          grid-template-columns: 1fr 1fr;
-        }
-        .milestone {
-          min-height: 215px;
-          padding: 25px 24px;
-        }
-        .milestone + .milestone {
-          padding-left: 24px;
-        }
-        .milestone:nth-child(3) {
-          border-left: 0;
-        }
-        .milestone:nth-child(n + 3) {
-          border-top: 1px solid var(--line);
-        }
-        .proof-note {
-          flex-direction: column;
-        }
-        .stories-head {
-          gap: 30px;
-        }
-        .story-index {
-          padding: 18px 28px;
-          border-right: 0;
-          border-bottom: 1px solid var(--line);
-          text-align: left;
-        }
-        .story-grid {
-          gap: 14px;
-        }
-        .proof-standard-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-        .proof-requirement {
-          min-height: 210px;
-          padding: 26px 24px;
-          border-bottom: 1px solid #3e4952;
-        }
-        .proof-requirement + .proof-requirement {
-          padding-left: 24px;
-        }
-        .proof-requirement:nth-child(3),
-        .proof-requirement:nth-child(5) {
-          border-left: 0;
-        }
-        .proof-requirement:nth-child(5) {
-          grid-column: 1/-1;
-        }
-        .proof-approval {
-          align-items: flex-start;
-          flex-direction: column;
-          gap: 12px;
-        }
-        .story-card {
-          min-height: 0;
-        }
-        .director-grid {
-          gap: 55px;
-        }
-        .portrait {
-          height: 440px;
-        }
-        .footer-grid {
-          align-items: flex-start;
-          gap: 32px;
-          flex-direction: column;
-        }
-        .footer p {
-          text-align: left;
-        }
-      }
-      @media (max-width: 480px) {
-        .hero h1 {
-          font-size: 52px;
-        }
-        .hero-art {
-          height: 330px;
-        }
-        .deliverables,
-        .mechanism-grid,
-        .credentials,
-        .form-grid,
-        .booking-options,
-        .milestones {
-          grid-template-columns: 1fr;
-        }
-        .semi-private {
-          padding: 28px 22px;
-        }
-        .deliverable:nth-child(even) {
-          padding-left: 0;
-          border-left: 0;
-        }
-        .offer-stack {
-          margin-top: 46px;
-        }
-        .offer-step {
-          grid-template-columns: 42px 1fr;
-          gap: 16px;
-          padding: 27px 22px;
-        }
-        .offer-number {
-          font-size: 34px;
-        }
-        .offer-detail {
-          grid-column: 2;
-          padding: 18px 0 0;
-          border-top: 1px solid var(--line);
-          border-left: 0;
-          text-align: left;
-        }
-        .offer-detail strong {
-          font-size: 27px;
-        }
-        .commitment,
-        .decision-note {
-          padding-right: 22px;
-          padding-left: 22px;
-        }
-        .milestones-head h3 {
-          font-size: 41px;
-        }
-        .milestone,
-        .milestone + .milestone {
-          min-height: 0;
-          padding: 26px 0;
-          border-left: 0;
-        }
-        .milestone + .milestone {
-          border-top: 1px solid var(--line);
-        }
-        .scorecard,
-        .process,
-        .work-sample,
-        .observations,
-        .story-copy,
-        .story-quote,
-        .story-card {
-          padding: 30px 24px;
-        }
-        .story-copy h3 {
-          font-size: 39px;
-        }
-        .proof-standard-grid {
-          grid-template-columns: 1fr;
-        }
-        .proof-requirement,
-        .proof-requirement + .proof-requirement {
-          min-height: 0;
-          padding: 25px 0;
-          border-left: 0;
-          border-bottom: 1px solid #3e4952;
-        }
-        .proof-requirement:nth-child(5) {
-          grid-column: auto;
-        }
-        .story-quote {
-          min-height: 340px;
-          font-size: 30px;
-        }
-        .case-step {
-          grid-template-columns: 1fr;
-          gap: 6px;
-        }
-        .measure {
-          grid-template-columns: 95px 1fr 35px;
-        }
-        .cta {
-          padding: 70px 0;
-        }
-        .modal-inner {
-          padding: 40px 24px 28px;
-        }
-        .modal h2 {
-          font-size: 39px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-    <div class="topline"></div>
-    <header class="header">
-      <div class="wrap nav">
-        <a class="brand" href="#top"
-          ><span class="brand-mark">A</span>ALGEBRA READY</a
-        ><button
-          class="menu"
-          type="button"
-          aria-label="Open menu"
-          aria-expanded="false"
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="wordmark" href="#top" aria-label="Algebra Ready home"
+          ><span>ALGEBRA</span> <em>READY</em></a
         >
-          ☰
-        </button>
-        <nav class="links">
-          <a href="#sprint">The Academy</a><a href="#fit">Fit</a
-          ><a href="#evidence">The standard</a
-          ><a href="#stories">Proof policy</a><a href="#about">Leadership</a
-          ><button class="button review-trigger" type="button">
-            Apply now
-          </button>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="#academy">The Academy</a><a href="#method">Method</a
+          ><a href="#stories">Parent proof</a><a href="#about">About</a>
         </nav>
+        <a class="header-cta" href="#review">Request a review</a>
       </div>
     </header>
-    <main id="main-content">
-      <span id="top"></span>
-      <section class="hero">
-        <div class="wrap hero-grid">
-          <div>
-            <div class="label">
-              Founding semi-private Academy · Grades 4–6 · Charleston
-            </div>
-            <h1>An A should be the starting point—not the <em>ceiling.</em></h1>
-            <p class="hero-promise">
-              Extend school learning into deeper reasoning and advanced readiness.
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-grid-lines" aria-hidden="true"></div>
+        <div class="shell hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              Founding Academy · Grades 4–6 · Charleston area
             </p>
-            <p class="hero-copy">
-              A selective 12-week mathematics academy for capable students in
-              Grades 4–6 who need stronger foundations, greater challenge, or
-              both. Each accepted student receives a personalized roadmap,
-              twelve weekly semi-private sessions, targeted practice, weekly
-              parent updates, and formal evidence reviews.
+            <h1>An A should be the starting point—<em>not the ceiling.</em></h1>
+            <p class="hero-lead">
+              A selective 12-week mathematics academy for capable students ready
+              for deeper reasoning and advanced middle-school math.
             </p>
-            <div class="actions">
-              <button class="button review-trigger" type="button">
-                Apply for a founding seat</button
-              ><a class="button outline" href="#sprint"
-                >See how semi-private works</a
+            <div class="hero-actions">
+              <a class="button button-primary" href="#review"
+                >Request a Readiness Review</a
+              ><a class="text-link" href="#academy"
+                >Explore the Academy <span aria-hidden="true">↘</span></a
               >
             </div>
-            <p class="founding-note">
-              Two founding groups. Eight accepted students total. Every group is
-              capped at four academically compatible students.
-            </p>
           </div>
-          <div
-            class="hero-art"
-            role="img"
-            aria-label="A graphic representation of mathematical potential"
+          <aside
+            class="readiness-card"
+            aria-label="Illustrative readiness profile"
           >
-            <div class="formula">x<sup>+</sup></div>
-            <div class="art-tag">
-              <small>The Algebra Ready idea</small
-              ><b>Potential is only the beginning.</b>
+            <div class="card-orbit orbit-one" aria-hidden="true"></div>
+            <div class="card-orbit orbit-two" aria-hidden="true"></div>
+            <div class="monogram" aria-hidden="true">AR</div>
+            <div class="profile-heading">
+              <span>Illustrative readiness profile</span
+              ><strong>Readiness you can measure.</strong>
             </div>
-            <div class="side-word">Charleston · South Carolina</div>
+            <div class="measure-list">
+              <div class="measure">
+                <div class="measure-label">
+                  <span>Number sense</span><b>Secure</b>
+                </div>
+                <div class="measure-track" aria-hidden="true">
+                  <span style="width: 82%"></span>
+                </div>
+              </div>
+              <div class="measure">
+                <div class="measure-label">
+                  <span>Fluency</span><b>Secure</b>
+                </div>
+                <div class="measure-track" aria-hidden="true">
+                  <span style="width: 91%"></span>
+                </div>
+              </div>
+              <div class="measure">
+                <div class="measure-label">
+                  <span>Fractions</span><b>Priority</b>
+                </div>
+                <div class="measure-track" aria-hidden="true">
+                  <span style="width: 64%"></span>
+                </div>
+              </div>
+              <div class="measure">
+                <div class="measure-label">
+                  <span>Reasoning</span><b>Developing</b>
+                </div>
+                <div class="measure-track" aria-hidden="true">
+                  <span style="width: 76%"></span>
+                </div>
+              </div>
+            </div>
+            <p class="card-note">Baseline → instruction → reassessment</p>
+          </aside>
+        </div>
+        <div class="shell fact-strip" aria-label="Academy essentials">
+          <div class="fact">
+            <strong>4–6</strong><span>Focused grade band</span>
+          </div>
+          <div class="fact">
+            <strong>12</strong><span>Weekly sessions</span>
+          </div>
+          <div class="fact">
+            <strong>4</strong><span>Students maximum</span>
+          </div>
+          <div class="fact"><strong>1</strong><span>Clear roadmap</span></div>
+        </div>
+        <div class="shell authority-strip" aria-label="Academic authority">
+          <span>Founder-led diagnostics</span
+          ><span>Virginia-licensed educator</span><span>M.Ed.</span
+          ><span>Graduate study in K–6 mathematics education</span>
+        </div>
+      </section>
+      <section class="point-of-view section-pad">
+        <div class="shell editorial-grid">
+          <p class="section-index">01 · Our point of view</p>
+          <div>
+            <h2>
+              School provides essential grade-level learning. We extend it with
+              <em>personalized challenge.</em>
+            </h2>
+            <div class="three-principles">
+              <article>
+                <span>01</span>
+                <h3>See the potential</h3>
+                <p>
+                  Look beyond the grade to the reasoning and capacity
+                  underneath.
+                </p>
+              </article>
+              <article>
+                <span>02</span>
+                <h3>Build the readiness</h3>
+                <p>
+                  Strengthen the fluency and thought habits harder math will
+                  demand.
+                </p>
+              </article>
+              <article>
+                <span>03</span>
+                <h3>Raise the rigor</h3>
+                <p>
+                  Explain, defend, revise, and transfer thinking across
+                  unfamiliar problems.
+                </p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
-      <section id="academy" class="belief">
-        <div class="wrap belief-grid">
-          <div class="chapter">01 / Our point of view</div>
-          <h2>
-            School provides essential grade-level learning. We extend it with
-            <em>personalized challenge.</em>
-          </h2>
-          <div class="principles">
-            <article class="principle">
+      <section class="academy section-pad" id="academy">
+        <div class="shell">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="section-index">02 · The Academy</p>
+              <h2>Build the foundation. Raise the ceiling.</h2>
+            </div>
+            <p>
+              One diagnostic-first academic experience—not a bundle of tutoring
+              hours. Every student enters with a clear priority and finishes
+              with evidence of what changed.
+            </p>
+          </div>
+          <div class="academy-deliverables">
+            <article>
               <span>01</span>
-              <h3>See the potential</h3>
+              <h3>Readiness Review</h3>
               <p>
-                We look beyond present grades to the reasoning, curiosity, and
-                capacity underneath.
+                Parent call, student assessment, results meeting, and a clear
+                recommendation.
               </p>
             </article>
-            <article class="principle">
+            <article>
               <span>02</span>
-              <h3>Build the readiness</h3>
+              <h3>Personal roadmap</h3>
               <p>
-                Every sequence strengthens the fluency and thought habits
-                advanced mathematics will demand.
+                A 12-week priority sequence built from the student’s readiness
+                evidence.
               </p>
             </article>
-            <article class="principle">
+            <article>
               <span>03</span>
-              <h3>Raise the rigor</h3>
+              <h3>Weekly instruction</h3>
               <p>
-                Students explain, defend, revise, and transfer their thinking across
-                unfamiliar problems.
+                Twelve 60-minute sessions with no more than four compatible
+                students.
               </p>
             </article>
-          </div>
-        </div>
-      </section>
-      <section id="sprint" class="sprint">
-        <div class="wrap">
-          <div class="sprint-grid">
-            <div>
-              <div class="label">02 / The experience</div>
-              <h2>
-                One clear offer: the 12-Week Semi-Private Algebra Ready Academy.
-              </h2>
-              <p class="sprint-intro">
-                We identify the highest-leverage gap, build an individual
-                roadmap, teach it in a matched group of no more than four, and
-                show parents the evidence at Weeks 4, 8, and 12. The Academy is
-                standardized; each student’s path is prescribed from the
-                assessment evidence.
-              </p>
-              <p class="sequence">
-                See the gap → Launch the plan → Build the skill → Prove the
-                progress
-              </p>
-            </div>
-            <div
-              class="deliverables"
-              role="list"
-              aria-label="Academy experience"
-            >
-              <div class="deliverable" role="listitem">
-                No more than four students per group
-              </div>
-              <div class="deliverable" role="listitem">
-                Twelve weekly 60-minute sessions
-              </div>
-              <div class="deliverable" role="listitem">
-                Targeted between-session practice
-              </div>
-              <div class="deliverable" role="listitem">
-                Weekly parent progress updates
-              </div>
-            </div>
-          </div>
-          <div
-            class="semi-private"
-            aria-label="How semi-private instruction works"
-          >
-            <div>
-              <div class="proof-kicker">The semi-private advantage</div>
-              <h3>Same domain. Different entry points.</h3>
+            <article>
+              <span>04</span>
+              <h3>Visible evidence</h3>
               <p>
-                A fraction group might all study magnitude while one student
-                uses models, another uses benchmarks, another proves
-                equivalence, and another tackles unfamiliar multi-step transfer.
-                The group creates energy; the work stays personal.
+                Targeted practice, weekly parent updates, and formal reviews at
+                Weeks 4, 8, and 12.
               </p>
+            </article>
+          </div>
+          <div class="journey" aria-label="Readiness Review to Academy journey">
+            <div><small>Start</small><strong>Parent call</strong></div>
+            <span aria-hidden="true">→</span>
+            <div>
+              <small>Diagnose</small><strong>Student assessment</strong>
             </div>
-            <div class="mechanism-grid" role="list">
-              <article class="mechanism-card" role="listitem">
-                <span>01 / Shared focus</span>
-                <h4>One mathematical domain</h4>
-                <p>
-                  Students can discuss, compare, and learn from multiple ways of
-                  thinking about the same important idea.
-                </p>
-              </article>
-              <article class="mechanism-card" role="listitem">
-                <span>02 / Personal path</span>
-                <h4>Individual progression</h4>
-                <p>
-                  Each task, prompt, and next step is matched to the student’s
-                  readiness evidence, extending grade-level learning at the
-                  right pace.
-                </p>
-              </article>
-              <article class="mechanism-card" role="listitem">
-                <span>03 / Live coaching</span>
-                <h4>Question. Correct. Extend.</h4>
-                <p>
-                  The coach rotates deliberately, listens to reasoning, corrects
-                  misconceptions, and raises the demand at the right moment.
-                </p>
-              </article>
-              <article class="mechanism-card" role="listitem">
-                <span>04 / Real proof</span>
-                <h4>Independent transfer</h4>
-                <p>
-                  Progress counts when the student can explain and apply the
-                  idea without being rescued by a familiar example.
-                </p>
-              </article>
+            <span aria-hidden="true">→</span>
+            <div>
+              <small>Prescribe</small><strong>Results + roadmap</strong>
+            </div>
+            <span aria-hidden="true">→</span>
+            <div><small>Transform</small><strong>12-week Academy</strong></div>
+            <span aria-hidden="true">→</span>
+            <div>
+              <small>Decide</small><strong>Graduate or continue</strong>
             </div>
           </div>
-          <div class="offer-stack" aria-label="What every family receives">
-            <article class="offer-step">
-              <div class="offer-number" aria-hidden="true">01</div>
-              <div class="offer-copy">
-                <h3>Complimentary readiness and results process</h3>
-                <p>
-                  Start with a 20-minute parent call. If the fit is promising,
-                  your child completes a student assessment, followed by a
-                  parent results meeting. You see the evidence and receive a
-                  clear recommendation before making an enrollment decision.
-                </p>
-              </div>
-              <div class="offer-detail">
-                <strong>Call → assessment → results</strong>
-                <span>Complimentary readiness process</span>
-              </div>
-            </article>
-            <article class="offer-step launch">
-              <div class="offer-number" aria-hidden="true">02</div>
-              <div class="offer-copy">
-                <h3>Personalized launch plan</h3>
-                <p>
-                  If the Academy is the right fit and you choose to enroll, your
-                  child receives a personalized 12-week priority map, compatible
-                  cohort placement, a baseline parent record, and the first
-                  four-week learning sequence.
-                </p>
-              </div>
-              <div class="offer-detail">
-                <strong>Individual roadmap</strong>
-                <span>Built from assessment evidence</span>
-              </div>
-            </article>
-            <article class="offer-step">
-              <div class="offer-number" aria-hidden="true">03</div>
-              <div class="offer-copy">
-                <h3>Complete 12-week Academy term</h3>
-                <p>
-                  Twelve weekly 60-minute semi-private sessions, targeted
-                  between-session practice, weekly parent updates, progress
-                  tracking, formal reviews at Weeks 4 and 8, and a final
-                  reassessment and written recommendation at Week 12.
-                </p>
-              </div>
-              <div class="offer-detail">
-                <strong>12 weekly sessions</strong>
-                <span>Four students maximum</span>
-              </div>
-            </article>
-            <div class="commitment">
-              <div>
-                <h3>A defined starting point—not open-ended tutoring</h3>
-                <p>
-                  The initial Academy term contains three focused four-week
-                  evidence cycles. At Week 12, we compare the baseline and
-                  reassessment. Your child either graduates with a written
-                  next-step plan or receives a clear recommendation to continue
-                  in focused four-week Academy cycles.
-                </p>
-              </div>
-              <div class="commitment-summary">
-                <strong>Weeks 4 · 8 · 12</strong>
-                <span>Review, reassess, decide</span>
-              </div>
-            </div>
-          </div>
-          <p class="decision-note">
+          <div class="academy-assurance">
             <strong>See the evidence before you decide.</strong>
-            <span
-              >The parent call, student assessment, and results meeting come
-              first. Only then, if the Academy is the right fit, do we recommend
-              a cohort and walk you through enrollment on the call.</span
-            >
-          </p>
-          <div class="founding-capacity-note">
-            <b>Founding cohort</b>
             <p>
-              The opening cohort is intentionally limited to two
-              skill-compatible groups so every student receives close coaching
-              and every family receives consistent evidence.
+              The parent call, student assessment, and results meeting are
+              complimentary. Enrollment is recommended only when the Academy is
+              the right fit.
             </p>
-            <strong>2 groups · 8 seats</strong>
-          </div>
-          <div class="milestones-head">
-            <h3>Clear wins. No vague progress.</h3>
-            <p>
-              Every four weeks produces a concrete decision point—so you can see
-              what your child is learning, what holds independently, and what
-              should happen next.
-            </p>
-          </div>
-          <div class="milestones" aria-label="12-week Academy milestones">
-            <article class="milestone">
-              <small>Before Week 1 · Clarity</small>
-              <h4>Know the priority.</h4>
-              <p>
-                See the specific gap, what it is blocking, and the first plan
-                for addressing it.
-              </p>
-            </article>
-            <article class="milestone">
-              <small>Week 4 · First evidence</small>
-              <h4>See what is changing.</h4>
-              <p>
-                Review what was taught, what your child can demonstrate
-                independently, and the next target.
-              </p>
-            </article>
-            <article class="milestone">
-              <small>Week 8 · Transfer + next prescription</small>
-              <h4>Test it. Plan ahead.</h4>
-              <p>
-                See whether the skill transfers to less familiar problems and
-                discuss graduation or continuation while the evidence is fresh.
-              </p>
-            </article>
-            <article class="milestone">
-              <small>Week 12 · Reassess + record</small>
-              <h4>Compare. Prescribe. Move forward.</h4>
-              <p>
-                Compare reassessment evidence with the baseline and receive a
-                clear graduation or continuation recommendation. Feedback is
-                requested only after the record is complete.
-              </p>
-            </article>
           </div>
         </div>
       </section>
-      <section id="fit" class="fit">
-        <div class="wrap">
-          <div class="fit-head">
+      <section class="method section-pad" id="method">
+        <div class="shell method-layout">
+          <div class="method-intro">
+            <p class="section-index light">03 · Method</p>
+            <h2>Diagnose precisely. Sequence deliberately. Prove progress.</h2>
+            <p>The roadmap is personal. The instructional standard is not.</p>
+          </div>
+          <div class="method-steps">
+            <article>
+              <span>01</span>
+              <div>
+                <h3>Diagnose</h3>
+                <p>
+                  Find the starting point, the misconception, and what it is
+                  blocking.
+                </p>
+              </div>
+            </article>
+            <article>
+              <span>02</span>
+              <div>
+                <h3>Sequence</h3>
+                <p>
+                  Put the highest-leverage ideas in a deliberate instructional
+                  order.
+                </p>
+              </div>
+            </article>
+            <article>
+              <span>03</span>
+              <div>
+                <h3>Train</h3>
+                <p>
+                  Build fluency, reasoning, and transfer through targeted
+                  practice.
+                </p>
+              </div>
+            </article>
+            <article>
+              <span>04</span>
+              <div>
+                <h3>Prove</h3>
+                <p>
+                  Reassess against the baseline and make the next recommendation
+                  clear.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="shell proof-prompt">
+          <div class="paper-sample">
+            <p>Which is greater?</p>
+            <strong
+              ><span>7</span>/<span>12</span> <em>or</em> <span>5</span>/<span
+                >8</span
+              ></strong
+            >
+            <p>Prove it two ways.</p>
+            <div class="paper-rule"></div>
+            <div class="paper-rule short"></div>
+          </div>
+          <div class="prompt-copy">
+            <p class="section-index light">The standard</p>
+            <h3>Show intellectual effort, not manufactured confidence.</h3>
+            <p>
+              Progress counts when a student can explain the idea, defend the
+              reasoning, and transfer it to an unfamiliar problem.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="outcomes section-pad" id="outcomes">
+        <div class="shell">
+          <div class="section-heading split-heading">
             <div>
-              <div class="label">03 / Readiness &amp; fit</div>
-              <h2>The right structure for the right student.</h2>
+              <p class="section-index">04 · Outcomes</p>
+              <h2>Progress you can see.</h2>
             </div>
             <p>
-              Selectivity protects the quality of the group. The readiness
-              process is used to determine whether the Academy matches the
-              student’s needs, goals, and working habits.
+              Parents stop guessing. Every four weeks creates a clear record of
+              what was taught, what holds independently, and what comes next.
+            </p>
+          </div>
+          <div class="evidence-cycles">
+            <article>
+              <small>Before Week 1</small><span>01</span>
+              <h3>Know the priority.</h3>
+              <p>See the starting point, the obstacle, and the first plan.</p>
+            </article>
+            <article>
+              <small>Week 4</small><span>02</span>
+              <h3>See what is changing.</h3>
+              <p>
+                Review instruction, independent evidence, and the next target.
+              </p>
+            </article>
+            <article>
+              <small>Week 8</small><span>03</span>
+              <h3>Test the transfer.</h3>
+              <p>Apply the skill to less familiar problems and plan ahead.</p>
+            </article>
+            <article>
+              <small>Week 12</small><span>04</span>
+              <h3>Compare. Prescribe.</h3>
+              <p>Reassess, record the change, and graduate or continue.</p>
+            </article>
+          </div>
+          <div class="evidence-note">
+            <strong>Proof before praise.</strong>
+            <p>
+              Case studies are published only with dated baseline evidence,
+              like-for-like reassessment, and the parent’s exact written
+              approval.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="parent-stories section-pad" id="stories">
+        <div class="shell">
+          <div class="stories-heading">
+            <div>
+              <p class="section-index light">05 · Parent proof</p>
+              <h2>What parents noticed.</h2>
+            </div>
+            <p>
+              Historical observations from families of students Matthew has
+              taught. They show the kind of transfer Algebra Ready is designed
+              to make visible.
+            </p>
+          </div>
+          <article class="featured-story">
+            <div class="featured-story-copy">
+              <p class="story-label">Strong grades · Deeper reasoning</p>
+              <h3>An A was only the starting point.</h3>
+              <p>
+                Familiar answers masked a lack of conceptual depth. Later, at a
+                grocery store, she independently compared 3/4 and 2/3 and worked
+                through the reasoning beside the cart.
+              </p>
+              <div class="story-arc" aria-label="Student outcome summary">
+                <div>
+                  <span>Starting point</span
+                  ><strong>Strong grades. Surface explanations.</strong>
+                </div>
+                <div>
+                  <span>Priority</span
+                  ><strong
+                    >Explain, persist, and reason beyond a procedure.</strong
+                  >
+                </div>
+                <div>
+                  <span>Transfer</span
+                  ><strong
+                    >Used fraction reasoning in an unfamiliar setting.</strong
+                  >
+                </div>
+              </div>
+            </div>
+            <blockquote>
+              <span
+                >“It is worth it—especially if you have a child who is doing
+                fine, but you want to push them to see their potential.”</span
+              ><cite>Suzanne M. · Parent of a former student</cite>
+            </blockquote>
+          </article>
+          <div class="story-grid">
+            <article class="story-card">
+              <p class="story-label">Foundations + engagement</p>
+              <h3>From uncertain to willing.</h3>
+              <p>
+                His parent initially saw a child who seemed disengaged. As
+                foundational ideas became more secure, she saw greater
+                willingness to participate and explain his thinking.
+              </p>
+              <blockquote>
+                <span
+                  >“If you want your child to do more than say, ‘Two is the
+                  answer’—to explain why it is two and whether it could be
+                  anything else—I would really consider Algebra Ready.”</span
+                ><cite>Emma · Parent of a former student</cite>
+              </blockquote>
+            </article>
+            <article class="story-card">
+              <p class="story-label">Place value + reasoning</p>
+              <h3>Beyond the procedure.</h3>
+              <p>
+                She could identify the larger number but could not clearly
+                explain why. The work connected place value, fractions, and
+                decimals so unfamiliar questions had something solid underneath
+                them.
+              </p>
+              <blockquote>
+                <span>“It’s worth it. Do it. I’d do it ten times over.”</span
+                ><cite>Susie · Parent of a former student</cite>
+              </blockquote>
+            </article>
+            <article class="story-card">
+              <p class="story-label">Higher-order reasoning</p>
+              <h3>At the top—not at the ceiling.</h3>
+              <p>
+                He earned strong grades but was often disengaged. Higher-order
+                reasoning became the next priority, and his parent saw him begin
+                attacking demanding questions instead of setting them aside.
+              </p>
+              <blockquote>
+                <span
+                  >“I wish we would have done it with his older siblings.”</span
+                ><cite>Elise · Parent of a former student</cite>
+              </blockquote>
+            </article>
+          </div>
+          <p class="stories-note">
+            Parent observations are presented with first-name attribution and
+            were lightly edited for length and clarity. Individual experiences
+            vary; no grade, test score, course placement, or advancement is
+            guaranteed.
+          </p>
+          <div class="parent-relief">
+            <div>
+              <p class="section-index light">Clearer for parents</p>
+              <h3>You do not have to become the math teacher.</h3>
+            </div>
+            <p>
+              We identify the priority, build the sequence, guide the practice,
+              and show you the evidence. You know what changed and what should
+              happen next.
+            </p>
+            <a class="button button-gold" href="#review"
+              >Request a Readiness Review</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="fit section-pad">
+        <div class="shell">
+          <div class="section-heading fit-heading">
+            <p class="section-index">06 · Readiness &amp; fit</p>
+            <h2>The right structure for the right student.</h2>
+            <p>
+              Selectivity protects the quality of the group and the attention
+              each student receives.
             </p>
           </div>
           <div class="fit-grid">
-            <article class="fit-card">
-              <h3>Algebra Ready may be a strong fit if your child:</h3>
+            <article>
+              <p class="fit-label">A strong fit</p>
+              <h3>Capable. Curious. Ready for more.</h3>
               <ul>
                 <li>
                   Earns acceptable grades but is not consistently challenged
                 </li>
                 <li>Knows procedures but struggles to explain why they work</li>
                 <li>
-                  Has hidden gaps in fractions, number sense, or multi-step
-                  reasoning
+                  Has gaps in fractions, number sense, or multi-step reasoning
                 </li>
-                <li>
-                  Is preparing for more advanced middle-school mathematics
-                </li>
-                <li>
-                  Responds well to high expectations and deliberate practice
-                </li>
+                <li>Is preparing for advanced middle-school mathematics</li>
               </ul>
             </article>
-            <article class="fit-card not-fit">
-              <h3>It may not be the right fit if:</h3>
+            <article class="not-fit">
+              <p class="fit-label">Not the right fit</p>
+              <h3>Clear boundaries protect results.</h3>
               <ul>
                 <li>
                   You are looking primarily for homework completion or drop-in
@@ -1985,541 +514,182 @@
                   setting
                 </li>
                 <li>
-                  Consistent attendance and between-session practice are not
-                  possible
+                  Weekly attendance and short between-session practice are not
+                  realistic
                 </li>
               </ul>
             </article>
           </div>
         </div>
       </section>
-      <section id="evidence" class="evidence">
-        <div class="wrap">
-          <div class="evidence-head">
-            <div>
-              <div class="label">04 / The standard</div>
-              <h2>Progress you can see.</h2>
-            </div>
-            <p>
-              Readiness is not a feeling. Each student moves through a precise
-              academic sequence, with work and measurement that make growth
-              visible.
+      <section class="about section-pad" id="about">
+        <div class="shell about-grid">
+          <div>
+            <p class="section-index">07 · Academic leadership</p>
+            <h2>Designed with intention.</h2>
+            <p class="about-lead">
+              Matthew McSpadden establishes the diagnostic standard, designs
+              each student’s sequence, and reviews the evidence.
             </p>
-          </div>
-          <p class="illustrative-note">
-            The profile and learning progression below are illustrative examples
-            of how Algebra Ready documents progress. They are not presented as
-            results from a specific student.
-          </p>
-          <div class="proof-board">
-            <div class="scorecard">
-              <div class="scorecard-head">
-                <span>Readiness profile</span
-                ><span>Illustrative reporting format</span>
-              </div>
-              <div class="measure">
-                <span>Number sense</span>
-                <div class="track">
-                  <div class="fill" style="width: 82%"></div>
-                </div>
-                <b>82</b>
-              </div>
-              <div class="measure">
-                <span>Fluency</span>
-                <div class="track">
-                  <div class="fill" style="width: 91%"></div>
-                </div>
-                <b>91</b>
-              </div>
-              <div class="measure">
-                <span>Fractions</span>
-                <div class="track">
-                  <div class="fill" style="width: 64%"></div>
-                </div>
-                <b>64</b>
-              </div>
-              <div class="measure">
-                <span>Reasoning</span>
-                <div class="track">
-                  <div class="fill" style="width: 76%"></div>
-                </div>
-                <b>76</b>
-              </div>
-              <div class="proof-note">
-                <span
-                  ><strong>Baseline</strong> reveals the starting point.</span
-                ><span><strong>Reassessment</strong> proves what changed.</span>
-              </div>
-            </div>
-            <div class="process">
-              <h3>One coherent path.</h3>
-              <div class="step">
-                <b>01</b>
-                <div>20-minute parent call</div>
-              </div>
-              <div class="step">
-                <b>02</b>
-                <div>Student assessment</div>
-              </div>
-              <div class="step">
-                <b>03</b>
-                <div>Results + recommendation</div>
-              </div>
-              <div class="step">
-                <b>04</b>
-                <div>12-week Academy</div>
-              </div>
-              <div class="step">
-                <b>05</b>
-                <div>Reassess + recommend</div>
-              </div>
-            </div>
-          </div>
-          <div class="real-proof">
-            <article class="work-sample">
-              <div class="proof-kicker">Illustrative learning progression</div>
-              <h3>From a visible gap to mathematical command.</h3>
-              <div class="sample-row">
-                <span>Starting point</span>
-                <p>
-                  Compares fractions by looking only at the denominator rather
-                  than the size of the parts.
-                </p>
-              </div>
-              <div class="sample-row">
-                <span>Priority</span>
-                <p>
-                  Represent, compare, and defend fraction magnitude using models
-                  and benchmarks.
-                </p>
-              </div>
-              <div class="sample-row">
-                <span>Target evidence</span>
-                <p>
-                  Independently compares 3/4 and 2/3 using benchmarks or
-                  equivalence and explains why the comparison is true.
-                </p>
-              </div>
-            </article>
-            <article class="observations">
-              <div class="proof-kicker">Evidence for parents</div>
-              <h3>What every family receives.</h3>
-              <div class="evidence-item">
-                <b>01</b>
-                <div>
-                  <h4>Baseline</h4>
-                  <p>
-                    A readiness profile that names the starting point and the
-                    highest-leverage instructional priorities.
-                  </p>
-                </div>
-              </div>
-              <div class="evidence-item">
-                <b>02</b>
-                <div>
-                  <h4>Weekly + four-week evidence</h4>
-                  <p>
-                    A concise parent update documenting what was taught, what
-                    the student demonstrated, and what comes next—plus a formal
-                    evidence review every four weeks.
-                  </p>
-                </div>
-              </div>
-              <div class="evidence-item">
-                <b>03</b>
-                <div>
-                  <h4>12-week final record</h4>
-                  <p>
-                    A reassessment, a comparison of the evidence, and a written
-                    graduation or continuation recommendation.
-                  </p>
-                </div>
-              </div>
-            </article>
-          </div>
-          <p class="disclaimer">
-            Illustrative examples demonstrate the reporting method; they are not
-            testimonials or claims about a specific student. Published case
-            studies will use verified baseline and reassessment evidence and
-            family-approved verbatim quotations. Individual experiences vary,
-            and Algebra Ready does not guarantee specific grades, test scores,
-            course placement, or advancement.
-          </p>
-        </div>
-      </section>
-      <section id="stories" class="stories">
-        <div class="wrap">
-          <div class="stories-head">
-            <div>
-              <div class="label">05 / Proof policy</div>
-              <h2>Proof must be earned before it is published.</h2>
-            </div>
-            <p>
-              Historical parent observations remain off this page until the
-              exact wording is approved. Current Academy case studies will be
-              published only after the complete evidence chain exists.
+            <p class="signature">
+              Matthew McSpadden <span>Founder &amp; Academic Director</span>
             </p>
           </div>
           <div
-            class="proof-standard-grid"
+            class="credentials"
             role="list"
-            aria-label="Case study publication requirements"
+            aria-label="Academic credentials"
           >
-            <article class="proof-requirement" role="listitem">
-              <small>01 / Context</small>
-              <h3>Grade + starting point</h3>
-              <p>
-                Record the student’s grade, relevant context, and the precise
-                problem the Academy was asked to address.
-              </p>
-            </article>
-            <article class="proof-requirement" role="listitem">
-              <small>02 / Baseline</small>
-              <h3>Original evidence</h3>
-              <p>
-                Preserve a dated work sample, assessment result, or reasoning
-                transcript that shows what the student could do independently.
-              </p>
-            </article>
-            <article class="proof-requirement" role="listitem">
-              <small>03 / Dosage</small>
-              <h3>12-session record</h3>
-              <p>
-                Document attendance, targeted practice, the sequence taught, and
-                important adjustments made across the 12-week Academy.
-              </p>
-            </article>
-            <article class="proof-requirement" role="listitem">
-              <small>04 / Outcome</small>
-              <h3>Reassessment + transfer</h3>
-              <p>
-                Compare the baseline with a like-for-like reassessment, then
-                test whether the reasoning transfers to an unfamiliar problem.
-              </p>
-            </article>
-            <article class="proof-requirement" role="listitem">
-              <small>05 / Permission</small>
-              <h3>Exact parent approval</h3>
-              <p>
-                Send the final case study and proposed quotation to the family.
-                Publish only the exact version they approve in writing.
-              </p>
-            </article>
-          </div>
-          <div class="proof-approval">
-            <strong>No manufactured success stories.</strong>
-            <p>
-              No family is asked to promise a positive testimonial. Permission
-              is requested only for the exact words and evidence proposed for
-              publication. Individual experiences vary; Algebra Ready does not
-              guarantee grades, test scores, course placement, or advancement.
-            </p>
+            <div role="listitem">
+              <span>Classroom practice</span
+              ><strong>Virginia-licensed elementary educator</strong>
+            </div>
+            <div role="listitem">
+              <span>Graduate credential</span
+              ><strong>M.Ed. in Educational Technology</strong>
+            </div>
+            <div role="listitem">
+              <span>Advanced study</span
+              ><strong>Graduate study in K–6 mathematics education</strong>
+            </div>
+            <div role="listitem">
+              <span>Instructional focus</span
+              ><strong>Number sense, fluency, fractions, and reasoning</strong>
+            </div>
           </div>
         </div>
       </section>
-      <section id="about" class="director">
-        <div class="wrap director-grid">
-          <div class="portrait-wrap">
-            <img
-              class="portrait"
-              src="assets/matthew-office.svg"
-              alt="Matthew McSpadden, founder and academic director"
-            />
-          </div>
-          <div class="director-copy">
-            <div class="label">06 / Academic leadership</div>
-            <h2>Designed with intention.</h2>
-            <p>
-              Matthew McSpadden establishes the diagnostic standard, designs
-              each student’s sequence, and reviews the evidence. Families enter
-              a defined academic system—not a collection of tutoring sessions.
-            </p>
-            <div
-              class="credentials"
-              role="list"
-              aria-label="Academic foundation"
-            >
-              <div class="credential" role="listitem">
-                <span>Classroom practice</span>
-                <strong>Virginia-licensed elementary educator</strong>
-              </div>
-              <div class="credential" role="listitem">
-                <span>Graduate credential</span>
-                <strong
-                  >M.Ed. in Educational Technology, Western Governors
-                  University</strong
-                >
-              </div>
-              <div class="credential" role="listitem">
-                <span>Advanced study</span>
-                <strong>Graduate study in K–6 mathematics education</strong>
-              </div>
-              <div class="credential" role="listitem">
-                <span>Instructional focus</span>
-                <strong
-                  >Number sense, fluency, fractions, and mathematical
-                  reasoning</strong
-                >
-              </div>
-            </div>
-            <div class="signature">
-              Matthew McSpadden<span>Founder &amp; academic director</span>
-            </div>
-            <button class="button outline review-trigger" type="button">
-              Apply for a founding seat
-            </button>
-          </div>
-        </div>
-      </section>
-      <section class="cta">
-        <div class="wrap cta-grid">
+      <section class="questions section-pad" aria-labelledby="questions-title">
+        <div class="shell questions-grid">
           <div>
-            <h2>Apply for one of eight founding seats.</h2>
-            <p>
-              First, a 20-minute parent call. If the fit is promising, your
-              child completes a complimentary assessment and you receive a clear
-              recommendation before deciding whether to enroll. The cohort is
-              capped by policy; no countdown or invented availability.
-            </p>
+            <p class="section-index">08 · Common questions</p>
+            <h2 id="questions-title">Clear answers before the first call.</h2>
           </div>
-          <button class="button review-trigger" type="button">
-            Apply for a founding seat
-          </button>
+          <div class="question-list">
+            <details>
+              <summary>Is this only for students who are struggling?</summary>
+              <p>
+                No. Algebra Ready is built for capable students who need
+                stronger foundations, greater challenge, or both. Good grades
+                can coexist with unfinished reasoning or untapped potential.
+              </p>
+            </details>
+            <details>
+              <summary>
+                How can semi-private instruction still be personal?
+              </summary>
+              <p>
+                Students are matched around a shared mathematical domain, but
+                each enters at the point shown by the assessment. The group
+                creates discussion and energy; the roadmap, prompts, and next
+                steps remain individual.
+              </p>
+            </details>
+            <details>
+              <summary>
+                Do we have to enroll after the Readiness Review?
+              </summary>
+              <p>
+                No. The parent call, student assessment, and results meeting
+                come first. You see the evidence and receive a clear
+                recommendation before making any enrollment decision.
+              </p>
+            </details>
+            <details>
+              <summary>What happens after the initial 12 weeks?</summary>
+              <p>
+                We compare the baseline with the final reassessment. Your child
+                either graduates with a written next-step plan or receives a
+                focused recommendation to continue in four-week Academy evidence
+                cycles.
+              </p>
+            </details>
+          </div>
         </div>
       </section>
-    </main>
-    <footer class="footer">
-      <div class="wrap footer-grid">
-        <a class="brand" href="#top"
-          ><span class="brand-mark">A</span>ALGEBRA READY</a
-        >
-        <p>
-          Grades 4–6 · Charleston area<br />Build what comes next.<br />© 2026
-          Algebra Ready
-        </p>
-      </div>
-    </footer>
-    <dialog class="modal" id="review-modal">
-      <div class="modal-inner">
-        <button
-          class="modal-close"
-          type="button"
-          aria-label="Close application"
-        >
-          ×
-        </button>
-        <form
-          action="https://formsubmit.co/admissions@algebraready.io"
-          method="POST"
-          id="review-form"
-        >
-          <input
-            type="hidden"
-            name="_subject"
-            value="New founding Academy application"
-          /><input type="hidden" name="_captcha" value="false" />
-          <div class="application-step">
-            <div class="label">Founding application · Step 1 of 2</div>
-            <h2>Tell us about your student.</h2>
-            <p class="modal-copy">
-              Start with a 20-minute parent call. If the fit is promising, we
-              schedule the complimentary student assessment and parent results
-              meeting. The Academy begins only after a clear recommendation.
+      <section class="review section-pad" id="review">
+        <div class="shell review-grid">
+          <div class="review-copy">
+            <p class="section-index light">Request a Readiness Review</p>
+            <h2>See the starting point. Leave with a clear recommendation.</h2>
+            <p>
+              Begin with a brief parent call. If the fit is promising, your
+              child completes a complimentary assessment followed by a parent
+              results meeting.
             </p>
-            <div class="form-grid">
-              <div class="field">
-                <label for="parent-name">Parent name</label
+            <div class="review-sequence">
+              <span>Parent call</span><i aria-hidden="true">→</i
+              ><span>Assessment</span><i aria-hidden="true">→</i
+              ><span>Recommendation</span>
+            </div>
+          </div>
+          <form
+            class="review-form"
+            action="https://formsubmit.co/admissions@algebraready.io"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Algebra Ready Readiness Review request"
+            /><input type="hidden" name="_captcha" value="false" />
+            <div class="field-row">
+              <label
+                ><span>Parent name</span
                 ><input
-                  id="parent-name"
-                  name="Parent name"
                   type="text"
                   autocomplete="name"
-                  required
-                />
-              </div>
-              <div class="field">
-                <label for="email">Parent email</label
-                ><input
-                  id="email"
-                  name="Email"
-                  type="email"
-                  autocomplete="email"
-                  required
-                />
-              </div>
-              <div class="field">
-                <label for="phone">Best phone number</label
-                ><input
-                  id="phone"
-                  name="Phone"
-                  type="tel"
-                  autocomplete="tel"
-                  required
-                />
-              </div>
-              <div class="field">
-                <label for="grade">Grade</label
-                ><select id="grade" name="Grade" required>
-                  <option value="">Select grade</option>
+                  required=""
+                  name="Parent name" /></label
+              ><label
+                ><span>Student grade</span
+                ><select name="Grade" required="">
+                  <option value="" disabled="" selected="">Select grade</option>
                   <option>4th grade</option>
                   <option>5th grade</option>
                   <option>6th grade</option>
-                </select>
-              </div>
-              <div class="field wide">
-                <label for="unfamiliar-response"
-                  >When a math problem looks unfamiliar, what usually
-                  happens?</label
-                ><select
-                  id="unfamiliar-response"
-                  name="Response to unfamiliar problems"
-                  required
-                >
-                  <option value="">Choose the closest answer</option>
-                  <option>Persists and explains the reasoning</option>
-                  <option>Tries briefly, then guesses or asks for help</option>
-                  <option>Avoids it, shuts down, or says it is boring</option>
-                  <option>I am not sure yet</option>
-                </select>
-              </div>
-              <div class="field wide">
-                <label for="goal"
-                  >What would meaningful progress look like over the next 12
-                  weeks?</label
-                >
-                <textarea
-                  id="goal"
-                  name="Primary goal"
-                  placeholder="For example: explain fraction relationships, persist through unfamiliar problems, or prepare for advanced middle-school math."
-                  required
-                ></textarea>
-              </div>
-              <label class="commit-check field wide">
-                <input
-                  type="checkbox"
-                  name="12-week participation commitment"
-                  value="Yes"
-                  required
-                />
-                <span
-                  >If accepted, our family can support weekly attendance and the
-                  short targeted practice assigned between sessions.</span
-                >
-              </label>
-            </div>
-            <button
-              class="button form-action"
-              type="button"
-              id="continue-booking"
-            >
-              Continue to choose a call time
-            </button>
-          </div>
-          <div class="booking-step" hidden>
-            <button class="back-button" type="button" id="back-application">
-              ← Back to student details
-            </button>
-            <div class="label">Founding application · Step 2 of 2</div>
-            <h2>Request a 20-minute parent-call window.</h2>
-            <p class="modal-copy">
-              These are preferred windows, not instant appointments. Select the
-              best option and we will confirm a specific date and time by phone.
-            </p>
-            <div class="booking-options">
-              <label class="time-option"
-                ><input
-                  type="radio"
-                  name="Readiness call time"
-                  value="Tuesday · 12:30 PM"
-                  required
-                /><span>Tuesday · 12:30 PM</span></label
-              ><label class="time-option"
-                ><input
-                  type="radio"
-                  name="Readiness call time"
-                  value="Tuesday · 6:30 PM"
-                /><span>Tuesday · 6:30 PM</span></label
-              ><label class="time-option"
-                ><input
-                  type="radio"
-                  name="Readiness call time"
-                  value="Thursday · 12:30 PM"
-                /><span>Thursday · 12:30 PM</span></label
-              ><label class="time-option"
-                ><input
-                  type="radio"
-                  name="Readiness call time"
-                  value="Thursday · 6:30 PM"
-                /><span>Thursday · 6:30 PM</span></label
+                </select></label
               >
             </div>
-            <button class="button" type="submit">Submit my application</button>
+            <div class="field-row">
+              <label
+                ><span>Email</span
+                ><input
+                  type="email"
+                  autocomplete="email"
+                  required=""
+                  name="Email" /></label
+              ><label
+                ><span>Phone</span
+                ><input type="tel" autocomplete="tel" required="" name="Phone"
+              /></label>
+            </div>
+            <label
+              ><span>What would meaningful progress look like in 12 weeks?</span
+              ><textarea
+                name="12-week goal"
+                rows="3"
+                required=""
+              ></textarea></label
+            ><button class="button button-gold" type="submit">
+              Request a Readiness Review
+            </button>
             <p class="form-note">
-              Your information is used only to coordinate the readiness process.
-              No obligation, no mailing list.
+              No obligation. Your information is used only to coordinate the
+              readiness process.
             </p>
-          </div>
-        </form>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <a class="wordmark footer-wordmark" href="#top"
+          ><span>ALGEBRA</span> <em>READY</em></a
+        >
+        <p>Build the foundation. Raise the ceiling.</p>
+        <p>Grades 4–6 · Charleston area · © 2026</p>
       </div>
-    </dialog>
-    <script>
-      const menu = document.querySelector(".menu"),
-        links = document.querySelector(".links"),
-        modal = document.querySelector("#review-modal"),
-        form = document.querySelector("#review-form"),
-        application = document.querySelector(".application-step"),
-        booking = document.querySelector(".booking-step");
-      menu.addEventListener("click", () => {
-        const open = links.classList.toggle("open");
-        menu.setAttribute("aria-expanded", open);
-        menu.textContent = open ? "×" : "☰";
-      });
-      links.addEventListener("click", () => {
-        links.classList.remove("open");
-        menu.setAttribute("aria-expanded", "false");
-        menu.textContent = "☰";
-      });
-      const track = (event, details = {}) => {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ event, ...details });
-      };
-      document.querySelectorAll(".review-trigger").forEach((button, index) =>
-        button.addEventListener("click", () => {
-          track("readiness_review_open", { cta_location: index });
-          modal.showModal();
-        }),
-      );
-      document
-        .querySelector(".modal-close")
-        .addEventListener("click", () => modal.close());
-      modal.addEventListener("close", () => {
-        application.hidden = false;
-        booking.hidden = true;
-      });
-      modal.addEventListener("click", (event) => {
-        if (event.target === modal) modal.close();
-      });
-      document
-        .querySelector("#continue-booking")
-        .addEventListener("click", () => {
-          const fields = [
-            ...application.querySelectorAll("input,select,textarea"),
-          ];
-          if (fields.every((field) => field.reportValidity())) {
-            application.hidden = true;
-            booking.hidden = false;
-            track("readiness_review_step_complete", { step: 1 });
-            booking.querySelector("input").focus();
-          }
-        });
-      form.addEventListener("submit", () => track("readiness_review_submit"));
-      document
-        .querySelector("#back-application")
-        .addEventListener("click", () => {
-          booking.hidden = true;
-          application.hidden = false;
-          document.querySelector("#parent-name").focus();
-        });
-    </script>
+    </footer>
   </body>
 </html>
