@@ -474,16 +474,16 @@
         color: #4d5b66;
         font-size: 14px;
       }
-      .offer-price {
+      .offer-detail {
         padding-left: 30px;
         border-left: 1px solid var(--line);
         text-align: right;
       }
-      .offer-price strong {
+      .offer-detail strong {
         display: block;
-        font: 400 44px/0.95 var(--serif);
+        font: 400 27px/1.05 var(--serif);
       }
-      .offer-price span {
+      .offer-detail span {
         display: block;
         margin-top: 9px;
         color: var(--muted);
@@ -510,15 +510,15 @@
         color: #b9c2c9;
         font-size: 14px;
       }
-      .commitment-total {
+      .commitment-summary {
         text-align: right;
       }
-      .commitment-total strong {
+      .commitment-summary strong {
         display: block;
         color: #fff;
-        font: 400 43px/1 var(--serif);
+        font: 400 34px/1 var(--serif);
       }
-      .commitment-total span {
+      .commitment-summary span {
         color: var(--blue);
         font-size: 10px;
         font-weight: 600;
@@ -544,7 +544,7 @@
         letter-spacing: 0.1em;
         text-transform: uppercase;
       }
-      .founding-price-note {
+      .founding-capacity-note {
         display: grid;
         grid-template-columns: auto 1fr auto;
         gap: 22px;
@@ -554,18 +554,18 @@
         border: 1px solid var(--line);
         background: var(--cream);
       }
-      .founding-price-note b {
+      .founding-capacity-note b {
         color: var(--rust);
         font-size: 10px;
         letter-spacing: 0.12em;
         text-transform: uppercase;
       }
-      .founding-price-note p {
+      .founding-capacity-note p {
         margin: 0;
         color: #4d5b66;
         font-size: 13px;
       }
-      .founding-price-note strong {
+      .founding-capacity-note strong {
         white-space: nowrap;
         font: 400 25px var(--serif);
       }
@@ -1409,7 +1409,7 @@
           gap: 20px;
           padding: 28px;
         }
-        .offer-price {
+        .offer-detail {
           grid-column: 2;
           padding: 18px 0 0;
           border-top: 1px solid var(--line);
@@ -1421,7 +1421,7 @@
           gap: 24px;
           padding: 34px 28px;
         }
-        .commitment-total {
+        .commitment-summary {
           text-align: left;
         }
         .decision-note {
@@ -1430,7 +1430,7 @@
           gap: 7px;
           padding: 20px 28px;
         }
-        .founding-price-note {
+        .founding-capacity-note {
           grid-template-columns: 1fr;
           gap: 8px;
         }
@@ -1543,15 +1543,15 @@
         .offer-number {
           font-size: 34px;
         }
-        .offer-price {
+        .offer-detail {
           grid-column: 2;
           padding: 18px 0 0;
           border-top: 1px solid var(--line);
           border-left: 0;
           text-align: left;
         }
-        .offer-price strong {
-          font-size: 39px;
+        .offer-detail strong {
+          font-size: 27px;
         }
         .commitment,
         .decision-note {
@@ -1656,10 +1656,11 @@
               Build the reasoning school grades do not always reveal.
             </p>
             <p class="hero-copy">
-              A 12-week mathematics transformation for capable students who can
-              get the answer—but cannot always explain why. Four students
-              maximum, individually matched tasks, and visible evidence every
-              four weeks.
+              A selective 12-week mathematics academy for capable students in
+              Grades 4–6 who need stronger foundations, greater challenge, or
+              both. Each accepted student receives a personalized roadmap,
+              twelve weekly semi-private sessions, targeted practice, weekly
+              parent updates, and formal evidence reviews.
             </p>
             <div class="actions">
               <button class="button review-trigger" type="button">
@@ -1669,8 +1670,8 @@
               >
             </div>
             <p class="founding-note">
-              Founding cohort policy: two groups, eight accepted students total,
-              with the $399 tuition rate reserved while continuously enrolled.
+              Two founding groups. Eight accepted students total. Every group is
+              capped at four academically compatible students.
             </p>
           </div>
           <div
@@ -1727,12 +1728,15 @@
           <div class="sprint-grid">
             <div>
               <div class="label">02 / The experience</div>
-              <h2>The 12-Week Semi-Private Algebra Ready Academy</h2>
+              <h2>
+                One clear offer: the 12-Week Semi-Private Algebra Ready Academy.
+              </h2>
               <p class="sprint-intro">
-                A diagnostic-first program where students share a mathematical
-                domain while working at individually matched entry points.
-                Progress is taught, tested, and shown across three focused
-                four-week chapters.
+                We identify the highest-leverage gap, build an individual
+                roadmap, teach it in a matched group of no more than four, and
+                show parents the evidence at Weeks 4, 8, and 12. The Academy is
+                standardized; each student’s path is prescribed from the
+                assessment evidence.
               </p>
               <p class="sequence">
                 See the gap → Launch the plan → Build the skill → Prove the
@@ -1807,89 +1811,88 @@
               </article>
             </div>
           </div>
-          <div class="offer-stack" aria-label="Enrollment and pricing">
+          <div class="offer-stack" aria-label="What every family receives">
             <article class="offer-step">
               <div class="offer-number" aria-hidden="true">01</div>
               <div class="offer-copy">
-                <h3>Complimentary readiness process</h3>
+                <h3>Complimentary readiness and results process</h3>
                 <p>
                   Start with a 20-minute parent call. If the fit is promising,
                   your child completes a student assessment, followed by a
-                  parent results meeting with a clear recommendation.
+                  parent results meeting. You see the evidence and receive a
+                  clear recommendation before making an enrollment decision.
                 </p>
               </div>
-              <div class="offer-price">
-                <strong>$0</strong>
-                <span>Before any enrollment decision</span>
+              <div class="offer-detail">
+                <strong>Call → assessment → results</strong>
+                <span>Complimentary readiness process</span>
               </div>
             </article>
             <article class="offer-step launch">
               <div class="offer-number" aria-hidden="true">02</div>
               <div class="offer-copy">
-                <h3>Readiness &amp; Launch Package</h3>
+                <h3>Personalized launch plan</h3>
                 <p>
-                  Paid only after the results meeting, if you choose the
-                  Academy. Includes a personalized 12-week priority map,
-                  placement and scheduling, a baseline parent record, and the
-                  first four-week learning sequence.
+                  If the Academy is the right fit and you choose to enroll, your
+                  child receives a personalized 12-week priority map, compatible
+                  cohort placement, a baseline parent record, and the first
+                  four-week learning sequence.
                 </p>
               </div>
-              <div class="offer-price">
-                <strong>$299</strong>
-                <span>One time · separate from tuition</span>
+              <div class="offer-detail">
+                <strong>Individual roadmap</strong>
+                <span>Built from assessment evidence</span>
               </div>
             </article>
             <article class="offer-step">
               <div class="offer-number" aria-hidden="true">03</div>
               <div class="offer-copy">
-                <h3>Founding Academy tuition</h3>
+                <h3>Complete 12-week Academy term</h3>
                 <p>
-                  Each tuition period includes four 60-minute small-group
-                  sessions—one per week—plus targeted practice, weekly parent
-                  updates, progress tracking, and a four-week evidence review.
-                  The founding rate is capped at the first eight accepted
-                  students.
+                  Twelve weekly 60-minute semi-private sessions, targeted
+                  between-session practice, weekly parent updates, progress
+                  tracking, formal reviews at Weeks 4 and 8, and a final
+                  reassessment and written recommendation at Week 12.
                 </p>
               </div>
-              <div class="offer-price">
-                <strong>$399</strong>
-                <span>Every four weeks</span>
+              <div class="offer-detail">
+                <strong>12 weekly sessions</strong>
+                <span>Four students maximum</span>
               </div>
             </article>
             <div class="commitment">
               <div>
-                <h3>12-week initial commitment</h3>
+                <h3>A defined starting point—not open-ended tutoring</h3>
                 <p>
-                  The initial term includes three $399 tuition payments: when
-                  the Academy begins, at Week 5, and at Week 9. After Week 12,
-                  we compare the evidence and prescribe graduation or continued
-                  Academy support. Founding students who continue without a
-                  break keep the $399 tuition rate.
+                  The initial Academy term contains three focused four-week
+                  evidence cycles. At Week 12, we compare the baseline and
+                  reassessment. Your child either graduates with a written
+                  next-step plan or receives a clear recommendation to continue
+                  in focused four-week Academy cycles.
                 </p>
               </div>
-              <div class="commitment-total">
-                <strong>$1,496</strong>
-                <span>Total initial investment</span>
+              <div class="commitment-summary">
+                <strong>Weeks 4 · 8 · 12</strong>
+                <span>Review, reassess, decide</span>
               </div>
             </div>
           </div>
           <p class="decision-note">
             <strong>See the evidence before you decide.</strong>
             <span
-              >No payment is collected before the assessment results meeting.
-              The $299 Launch Package is paid only if you choose to enroll. The
-              first $399 tuition payment begins when Academy instruction
-              begins.</span
+              >The parent call, student assessment, and results meeting come
+              first. Only then, if the Academy is the right fit, do we recommend
+              a cohort and walk you through enrollment on the call.</span
             >
           </p>
-          <div class="founding-price-note">
+          <div class="founding-capacity-note">
             <b>Founding cohort</b>
             <p>
-              This is a capped proof-building rate for the first eight accepted
-              students—not a permanent public price. A student who pauses and
-              later returns enters at the then-current tuition.
+              The opening cohort is intentionally limited to two
+              skill-compatible groups so every student receives close coaching
+              and every family receives consistent evidence.
             </p>
-            <strong>Planned public tuition: $599 / 4 weeks</strong>
+            <strong>2 groups · 8 seats</strong>
           </div>
           <div class="milestones-head">
             <h3>Clear wins. No vague progress.</h3>
