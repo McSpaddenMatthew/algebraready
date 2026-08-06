@@ -1052,6 +1052,7 @@ textarea {
 }
 
 .evidence-case-card h3 {
+  min-height: 102px;
   margin: 16px 0 24px;
   font-family: var(--serif);
   font-size: 34px;
@@ -2266,6 +2267,10 @@ textarea {
     min-height: 0;
     grid-column: auto;
     padding: 34px 28px;
+  }
+
+  .evidence-case-card h3 {
+    min-height: 0;
   }
 
   .evidence-case-link {
