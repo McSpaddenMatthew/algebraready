@@ -192,10 +192,21 @@ textarea {
 
 .hero-lead {
   max-width: 620px;
-  margin: 0 0 36px;
+  margin: 0 0 17px;
   color: var(--slate);
   font-size: 19px;
   line-height: 1.6;
+}
+
+.hero-outcome {
+  max-width: 610px;
+  margin: 0 0 34px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
 }
 
 .hero-actions {
@@ -707,6 +718,118 @@ textarea {
   margin: 0;
   color: var(--slate);
   font-size: 13px;
+}
+
+.offer-enhancement {
+  margin-top: 48px;
+  border-top: 1px solid var(--line);
+  padding-top: 48px;
+}
+
+.offer-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+  border: 1px solid var(--line);
+  padding: 0;
+  background: var(--ivory);
+  list-style: none;
+}
+
+.offer-detail {
+  display: grid;
+  min-height: 126px;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  padding: 28px;
+}
+
+.offer-detail + .offer-detail {
+  border-left: 1px solid var(--line);
+}
+
+.offer-detail span {
+  color: var(--gold);
+  font-family: var(--serif);
+  font-size: 25px;
+  line-height: 1;
+}
+
+.offer-detail p {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.parent-effort-statement {
+  max-width: 940px;
+  margin: 36px 0;
+  border-left: 2px solid var(--gold);
+  padding: 3px 0 3px 24px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(25px, 2.7vw, 35px);
+  line-height: 1.16;
+}
+
+.progress-extension {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.32fr) minmax(0, 1fr);
+  gap: 44px;
+  border-top: 4px solid var(--gold);
+  padding: 34px 38px;
+  background: var(--ink);
+  color: white;
+}
+
+.progress-extension p {
+  margin: 0;
+}
+
+.progress-extension .progress-extension-label {
+  color: #dfc18a;
+  font-family: var(--serif);
+  font-size: 29px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.progress-extension p:last-child {
+  color: #d8dee3;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.progress-disclaimer {
+  margin: 10px 0 0;
+  color: var(--slate);
+  font-size: 10px;
+}
+
+.offer-conversion {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 28px 0;
+}
+
+.offer-conversion p {
+  max-width: 690px;
+  margin: 0;
+  color: var(--slate);
+  font-size: 13px;
+}
+
+.offer-conversion .button {
+  flex: 0 0 auto;
 }
 
 .method {
@@ -1561,6 +1684,10 @@ textarea {
     font-size: 16px;
   }
 
+  .hero-outcome {
+    font-size: 21px;
+  }
+
   .hero-note {
     margin-top: 20px;
   }
@@ -1648,6 +1775,36 @@ textarea {
 
   .academy-inclusions {
     grid-template-columns: 1fr;
+  }
+
+  .offer-detail-grid,
+  .progress-extension {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-detail {
+    min-height: 0;
+    padding: 24px;
+  }
+
+  .offer-detail + .offer-detail {
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .parent-effort-statement {
+    font-size: 26px;
+  }
+
+  .progress-extension {
+    gap: 20px;
+    padding: 30px 26px;
+  }
+
+  .offer-conversion {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
   }
 
   .three-principles article,
