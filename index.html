@@ -888,14 +888,10 @@
           </div>
           <form
             class="review-form"
-            action="https://formsubmit.co/admissions@algebraready.io"
+            id="readiness-review-form"
+            action="https://script.google.com/macros/s/AKfycbz_c3ZAEi978yiV32ObqOFjOl1UTcuDzcnTFsqFR7TRE-YmI5Cv9XeeU2dBSak1M-2Atg/exec"
             method="POST"
           >
-            <input
-              type="hidden"
-              name="_subject"
-              value="New Algebra Ready Readiness Review request"
-            /><input type="hidden" name="_captcha" value="false" />
             <div class="field-row">
               <label
                 ><span>Parent name</span
@@ -903,10 +899,10 @@
                   type="text"
                   autocomplete="name"
                   required=""
-                  name="Parent name" /></label
+                  name="parentName" /></label
               ><label
                 ><span>Student grade</span
-                ><select name="Grade" required="">
+                ><select name="studentGrade" required="">
                   <option value="" disabled="" selected="">Select grade</option>
                   <option>4th grade</option>
                   <option>5th grade</option>
@@ -921,10 +917,10 @@
                   type="email"
                   autocomplete="email"
                   required=""
-                  name="Email" /></label
+                  name="email" /></label
               ><label
                 ><span>Phone</span
-                ><input type="tel" autocomplete="tel" required="" name="Phone"
+                ><input type="tel" autocomplete="tel" required="" name="phone"
               /></label>
             </div>
             <label
@@ -932,14 +928,14 @@
                 >What are you noticing—struggle, confidence, strong grades,
                 boredom, or readiness for more challenge?</span
               ><textarea
-                name="Reason for review"
+                name="reason"
                 rows="3"
                 required=""
               ></textarea></label
             ><button class="button button-gold" type="submit">
               Request My Complimentary Review
             </button>
-            <p class="form-note">
+            <p class="form-note" id="review-form-status" aria-live="polite">
               No tuition. No obligation. Current Academy tuition is shared on
               the parent call before any student assessment is scheduled.
             </p>
@@ -956,5 +952,61 @@
         <p>Grades 4–6 · Serving North Arlington & McLean · © 2026</p>
       </div>
     </footer>
+    <script>
+      (() => {
+        const form = document.getElementById("readiness-review-form");
+        const status = document.getElementById("review-form-status");
+        if (!form || !status) return;
+
+        const button = form.querySelector('button[type="submit"]');
+        const defaultStatus = status.textContent.trim();
+
+        form.addEventListener("submit", async (event) => {
+          event.preventDefault();
+
+          const formData = new FormData(form);
+          const payload = {
+            parentName: formData.get("parentName"),
+            studentGrade: formData.get("studentGrade"),
+            email: formData.get("email"),
+            phone: formData.get("phone"),
+            reason: formData.get("reason"),
+            source: "algebraready.io"
+          };
+
+          button.disabled = true;
+          button.textContent = "Sending…";
+          status.textContent = "Sending your request…";
+
+          try {
+            await fetch(form.action, {
+              method: "POST",
+              mode: "no-cors",
+              headers: { "Content-Type": "text/plain;charset=utf-8" },
+              body: JSON.stringify(payload)
+            });
+
+            form.reset();
+            status.textContent =
+              "Request received. Matthew will follow up with you shortly.";
+            button.textContent = "Request Sent";
+          } catch (error) {
+            status.textContent =
+              "Something went wrong. Please try again or contact Matthew directly.";
+            button.textContent = "Request My Complimentary Review";
+          } finally {
+            button.disabled = false;
+            window.setTimeout(() => {
+              if (button.textContent === "Request Sent") {
+                button.textContent = "Request My Complimentary Review";
+              }
+              if (status.textContent.includes("Request received")) {
+                status.textContent = defaultStatus;
+              }
+            }, 8000);
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
