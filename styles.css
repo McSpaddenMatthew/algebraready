@@ -2695,3 +2695,95 @@ textarea {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* Hero founder profile + school proof */
+.hero-profile-card {
+  min-height: 540px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hero-portrait {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hero-profile-copy {
+  padding: 22px 26px 26px;
+}
+
+.hero-profile-copy span,
+.school-proof-label {
+  display: block;
+  color: var(--gold);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero-profile-copy strong {
+  display: block;
+  margin-top: 7px;
+  color: #f7f5f0;
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.hero-profile-copy p {
+  margin: 12px 0 0;
+  color: #d8dee3;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.school-proof {
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid rgba(11, 29, 44, 0.16);
+  border-bottom: 1px solid rgba(11, 29, 44, 0.16);
+  padding: 18px 0 16px;
+}
+
+.school-proof-names {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 10px;
+  margin: 8px 0 0;
+  color: var(--navy);
+  font-size: clamp(14px, 1.6vw, 18px);
+  line-height: 1.35;
+}
+
+.school-proof-names span {
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.school-service-line {
+  margin: 7px 0 0;
+  color: var(--slate);
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+@media (max-width: 820px) {
+  .hero-profile-card {
+    min-height: 0;
+  }
+
+  .hero-portrait {
+    max-height: 420px;
+  }
+
+  .school-proof {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
