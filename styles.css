@@ -2791,3 +2791,15 @@ textarea {
     padding-right: 20px;
   }
 }
+
+
+.footer-inner p a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-inner p a:hover,
+.footer-inner p a:focus-visible {
+  color: white;
+  text-decoration: underline;
+}
