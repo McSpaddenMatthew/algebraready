@@ -2706,13 +2706,13 @@ textarea {
 
 .hero-portrait {
   display: block;
-  width: 52%;
-  max-width: 250px;
-  aspect-ratio: 1 / 1;
+  width: 50%;
+  height: auto;
+  max-width: none;
   margin: 0 auto;
-  border-radius: 999px;
-  object-fit: cover;
-  object-position: center 18%;
+  border-radius: 0;
+  object-fit: contain;
+  object-position: center;
 }
 
 .hero-profile-copy {
@@ -2782,8 +2782,8 @@ textarea {
   }
 
   .hero-portrait {
-    width: 46%;
-    max-width: 220px;
+    width: 50%;
+    height: auto;
   }
 
   .school-proof {
