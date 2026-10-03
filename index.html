@@ -83,7 +83,7 @@
           ><a href="#stories">Parent Stories</a><a href="#about">About</a
           ><a href="#questions">Questions</a>
         </nav>
-        <a class="header-cta" href="#review">Get the free assessment</a>
+        <a class="header-cta" href="#review">Get My Child’s Math Game Plan</a>
       </div>
     </header>
     <main id="main">
@@ -97,8 +97,7 @@
               I come to your home
             </p>
             <h1>
-              1-on-1 elementary math tutoring that comes to your home.
-              <em>Build the foundation. Raise the ceiling.</em>
+              Know Exactly What Your Child Should Work on Next in Math
             </h1>
             <p class="hero-empathy">
               Some students need a missing foundation rebuilt. Others are doing
@@ -106,19 +105,19 @@
               what they actually need next.
             </p>
             <p class="hero-lead">
-              I start with a short assessment, identify the highest-leverage
-              skill, and then work with your child one-on-one in your home.
+              We’ll talk through where your child is now, what you want next,
+              and the clearest path to stronger math skills.
             </p>
             <p class="hero-outcome">
               Not generic homework help. Focused instruction, measurable progress.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#review">Get My Free Math Assessment</a>
+              <a class="button button-primary" href="#review">Get My Child’s Math Game Plan</a>
               <a class="text-link" href="#tutoring">See how tutoring works <span aria-hidden="true">↘</span></a>
             </div>
             <p class="hero-note">
-              <strong>Start with clarity.</strong> The initial math readiness
-              assessment is complimentary, and there is no obligation to enroll.
+              <strong>Free Math Game Plan Call.</strong> 15 minutes with me.
+              A clear next step. No obligation to enroll.
             </p>
           </div>
           <aside class="readiness-card hero-profile-card" aria-label="About Matthew McSpadden">
@@ -178,17 +177,17 @@
               adding more challenge.
             </p>
           </div>
-          <ol class="simple-plan" aria-label="Three steps from assessment to progress">
-            <li><span aria-hidden="true">01</span><div><h3>Assess.</h3><p>A short complimentary assessment shows me where your child is strong and where the next opportunity is.</p></div></li>
+          <ol class="simple-plan" aria-label="Three steps from conversation to progress">
+            <li><span aria-hidden="true">01</span><div><h3>Plan.</h3><p>Start with a free parent call about your child’s math and goals. If appropriate, a complimentary student assessment helps pinpoint what to work on next.</p></div></li>
             <li><span aria-hidden="true">02</span><div><h3>Tutor.</h3><p>I come to your home and work one-on-one on the skills that matter most.</p></div></li>
             <li><span aria-hidden="true">03</span><div><h3>Measure.</h3><p>We check progress so you can see what is changing and what we should work on next.</p></div></li>
           </ol>
           <div class="offer-path">
             <article class="offer-step review-step">
               <p class="offer-step-label">Start here · Complimentary</p>
-              <h3>15-Minute Math Readiness Assessment</h3>
+              <h3>Free Math Game Plan Call</h3>
               <p class="offer-step-intro">Find out what your child needs next before making a tutoring decision.</p>
-              <ul><li>Targeted student math assessment</li><li>Clear explanation of strengths and gaps</li><li>Recommended next step</li></ul>
+              <ul><li>15-minute conversation with Matthew</li><li>Discuss your child’s challenges and goals</li><li>Recommended next step</li></ul>
               <p class="offer-step-footer"><strong>No tuition. No obligation.</strong></p>
             </article>
             <article class="offer-step academy-step">
@@ -206,7 +205,7 @@
           </div>
           <div class="offer-conversion">
             <p>The first step is simply finding out what your child needs next.</p>
-            <a class="button button-primary" href="#review">Get My Free Math Assessment</a>
+            <a class="button button-primary" href="#review">Get My Child’s Math Game Plan</a>
           </div>
         </div>
       </section>
@@ -371,7 +370,7 @@
               happen next.
             </p>
             <a class="button button-gold" href="#review"
-              >Get My Free Math Assessment</a
+              >Get My Child’s Math Game Plan</a
             >
           </div>
         </div>
@@ -466,12 +465,12 @@
             <p class="section-index light">Your complimentary first step</p>
             <h2>Find out what your child needs next.</h2>
             <p>
-              Start with a complimentary 15-minute Math Readiness Assessment.
-              I will identify the clearest next priority and explain what I would
-              work on if we continue together.
+              Request your free 15-minute Math Game Plan call below. I’ll contact
+              you to find a time. We’ll discuss your child’s math, your goals,
+              and the right next step. A student assessment can follow if needed.
             </p>
             <div class="review-sequence">
-              <span>Assessment</span><i aria-hidden="true">→</i><span>Clear priority</span><i aria-hidden="true">→</i><span>1-on-1 plan</span>
+              <span>Parent call</span><i aria-hidden="true">→</i><span>Your goals</span><i aria-hidden="true">→</i><span>Next step</span>
             </div>
           </div>
           <form
@@ -521,10 +520,10 @@
                 required=""
               ></textarea></label
             ><button class="button button-gold" type="submit">
-              Get My Free Math Assessment
+              Get My Child’s Math Game Plan
             </button>
             <p class="form-note" id="review-form-status" aria-live="polite">
-              No obligation. If tutoring looks like a fit, I will explain the in-home 1-on-1 option and current availability.
+              I’ll contact you to arrange your free Math Game Plan call. No obligation. Your call is not booked until we confirm a time.
             </p>
           </form>
         </div>
@@ -575,19 +574,19 @@
 
             form.reset();
             status.textContent =
-              "Request received. Matthew will follow up with you shortly.";
+              "Request sent. Matthew will contact you to arrange your free Math Game Plan call. Your call is not booked yet.";
             button.textContent = "Request Sent";
           } catch (error) {
             status.textContent =
               "Something went wrong. Please try again or contact Matthew directly.";
-            button.textContent = "Get My Free Math Assessment";
+            button.textContent = "Get My Child’s Math Game Plan";
           } finally {
             button.disabled = false;
             window.setTimeout(() => {
               if (button.textContent === "Request Sent") {
-                button.textContent = "Get My Free Math Assessment";
+                button.textContent = "Get My Child’s Math Game Plan";
               }
-              if (status.textContent.includes("Request received")) {
+              if (status.textContent.includes("Request sent")) {
                 status.textContent = defaultStatus;
               }
             }, 8000);
