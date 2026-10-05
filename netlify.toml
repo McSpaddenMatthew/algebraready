@@ -1,0 +1,3 @@
+# Preserve the .html links used by canonical tags, structured data, and sitemap.xml.
+[build.processing.html]
+  pretty_urls = false
