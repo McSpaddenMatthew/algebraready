@@ -583,6 +583,12 @@
               body: JSON.stringify(payload)
             });
 
+            gtag('event', 'conversion', {
+              'send_to': 'AW-18494563087/wBsWCP7HqZMdEI_G8vJE',
+              'value': 1.0,
+              'currency': 'USD'
+            });
+
             form.reset();
             status.textContent =
               "Request sent. Matthew will contact you to arrange your free parent call, followed by a free student assessment and written Math Game Plan. Your call is not booked yet.";
